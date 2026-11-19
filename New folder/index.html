@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="description" content="دفتر الرابع ب - مدرسة أنوار البديع: جدول الحصص والواجبات والامتحانات والتبليغات وشات الصف.">
+<meta property="og:title" content="دفتر الرابع ب - مدرسة أنوار البديع">
+<meta property="og:description" content="جدول الحصص والواجبات والامتحانات والتبليغات وشات الصف.">
+<meta property="og:locale" content="ar_IQ">
+<meta name="theme-color" content="#111513">
+<title>دفتر الرابع ب // مدرسة أنوار البديع</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f5f7f6; --card:#ffffff; --ink:#1a2320; --muted:#636f69; --pen:#2c7a59;
+  --pen-ink:#fff; --line:transparent; --bd:#e3e9e5; --bd-soft:#edf1ee; --hl:#e4f1ea;
+  --red:#c0392b; --green:#2c7a59; --amber:#9a6a1f;
+  --c-hw:#2c7a59; --c-hw-bg:#e4f1ea; --c-exam:#b4790e; --c-exam-bg:#fbf0dd;
+  --c-news:#2458b8; --c-news-bg:#e6edfa; --c-poll:#7a3fc9; --c-poll-bg:#f1e8fb;
+  --r-sm:8px; --r-md:12px; --r-lg:18px;
+  --sh-sm:0 1px 2px rgba(20,35,28,.06); --sh-md:0 4px 16px rgba(20,35,28,.08); --sh-lg:0 14px 38px rgba(20,35,28,.14);
+  --margin:transparent;
+}
+html[data-theme="dark"]{
+  --paper:#090d12; --card:#131a24; --ink:#f1f5f9; --muted:#94a3b8; --pen:#10b981;
+  --pen-ink:#04130d; --line:transparent; --bd:rgba(255,255,255,.1); --bd-soft:rgba(255,255,255,.06); --hl:rgba(16,185,129,.14);
+  --red:#f87171; --green:#10b981; --amber:#fbbf24;
+  --c-hw:#10b981; --c-hw-bg:rgba(16,185,129,.14); --c-exam:#fbbf24; --c-exam-bg:rgba(251,191,36,.14);
+  --c-news:#818cf8; --c-news-bg:rgba(129,140,248,.14); --c-poll:#c084fc; --c-poll-bg:rgba(192,132,252,.14);
+  --sh-sm:0 1px 2px rgba(0,0,0,.35); --sh-md:0 6px 20px rgba(0,0,0,.4); --sh-lg:0 18px 46px rgba(0,0,0,.55);
+  --margin:transparent;
+}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'IBM Plex Sans Arabic',Tahoma,sans-serif}
+html{-webkit-text-size-adjust:100%}
+body{
+  background-color:var(--paper);
+  color:var(--ink); min-height:100vh; padding:20px; position:relative; overflow-x:hidden;
+  line-height:1.55; letter-spacing:.1px;
+  transition:background-color .3s,color .3s;
+}
+.container{max-width:1240px;margin:0 auto;position:relative;z-index:1}
+::selection{background:var(--pen);color:var(--pen-ink)}
+
+/* ====== قسم ====== */
+.block{margin-bottom:30px}
+.block:last-of-type{margin-bottom:22px}
+.sec-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.sec-ico{width:34px;height:34px;border-radius:var(--r-sm);background:var(--hl);color:var(--pen);display:grid;place-items:center;font-size:1.05rem;flex:none}
+.sec-head h2{font-size:1.04rem;font-weight:800;letter-spacing:.2px}
+.sec-head .sec-sub{color:var(--muted);font-size:.8rem;font-weight:600;margin-right:auto}
+
+/* ====== الترويسة ====== */
+/* ===== الشريط العلوي الرفيع ===== */
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:14px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-ico{width:36px;height:36px;border-radius:10px;background:var(--pen);color:var(--pen-ink);display:grid;place-items:center;font-size:1.1rem;flex:none}
+.brand b{font-size:1rem;font-weight:800}
+.brand small{display:block;font-size:.72rem;color:var(--muted);font-weight:600}
+.top-actions{display:flex;align-items:center;gap:8px}
+.icon-btn{position:relative;background:var(--card);border:1px solid var(--bd);color:var(--ink);border-radius:50%;width:38px;height:38px;font-size:1rem;cursor:pointer;transition:border-color .15s,transform .15s;box-shadow:var(--sh-sm)}
+.icon-btn:hover{border-color:var(--pen);transform:translateY(-1px)}
+.install-btn{background:var(--ink);color:var(--paper);border:none;border-radius:20px;padding:8px 15px;font-weight:800;font-size:.8rem;cursor:pointer;transition:transform .15s}
+.install-btn:hover{transform:translateY(-1px)}
+.dot{position:absolute;top:-4px;left:-4px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:#d64545;color:#fff;font-size:.63rem;font-style:normal;font-weight:800;display:none;place-items:center;line-height:1;border:1.5px solid var(--card)}
+.dot.show{display:grid}
+
+/* ===== البطاقة الرئيسية (الهيرو) ===== */
+.hero{
+  position:relative;overflow:hidden;color:#fff;border-radius:22px;
+  background:
+    radial-gradient(640px 220px at 100% -10%, rgba(255,255,255,.10), transparent 60%),
+    linear-gradient(125deg,#143326,#2c7a59 60%,#1d5b43);
+  box-shadow:var(--sh-lg); padding:24px 26px; margin-bottom:20px;
+  display:grid; grid-template-columns:1.3fr 1fr; gap:22px; align-items:center;
+}
+html[data-theme="dark"] .hero{background:radial-gradient(640px 220px at 100% -10%, rgba(255,255,255,.08), transparent 60%),linear-gradient(135deg,#0f2922 0%,#134e3e 55%,#1e1b4b 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.12) 1px,transparent 1px);background-size:20px 20px;opacity:.25;pointer-events:none}
+.hero-main{position:relative;z-index:1}
+.hero-eyebrow{font-size:.78rem;font-weight:800;opacity:.78;letter-spacing:.3px;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.hero-banner{font-size:1.14rem;font-weight:800;line-height:1.5;max-width:46ch}
+.hero-chips{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.hero-chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:6px 13px;font-size:.78rem;font-weight:700;display:flex;align-items:center;gap:6px}
+.hero-clock{position:relative;z-index:1;background:rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:16px;text-align:center}
+.clock-digits{font-size:2.3rem;font-weight:800;direction:ltr;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:.5px}
+.clock-sub{font-size:.76rem;opacity:.82;font-weight:700;margin-top:4px}
+
+/* ===== شارات الفئات على البطاقات ===== */
+.cat-ico{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-size:1.05rem;flex:none}
+.card.cat-hw{border-top:3px solid var(--c-hw)}
+.card.cat-hw .cat-ico{background:var(--c-hw-bg);color:var(--c-hw)}
+.card.cat-exam{border-top:3px solid var(--c-exam)}
+.card.cat-exam .cat-ico{background:var(--c-exam-bg);color:var(--c-exam)}
+.card.cat-news{border-top:3px solid var(--c-news)}
+.card.cat-news .cat-ico{background:var(--c-news-bg);color:var(--c-news)}
+.card.cat-poll{border-top:3px solid var(--c-poll)}
+.card.cat-poll .cat-ico{background:var(--c-poll-bg);color:var(--c-poll)}
+.bottom-nav button{position:relative}
+.bottom-nav .dot{top:2px;left:calc(50% + 6px)}
+.news-item.unread{box-shadow:0 0 0 2px var(--pen)}
+
+/* بانر الحصة */
+.banner{background:var(--hl);color:var(--ink);border-radius:var(--r-md);padding:12px 16px;margin-bottom:16px;font-weight:700;font-size:.92rem;border:1px solid var(--bd-soft);box-shadow:var(--sh-sm);display:flex;gap:10px;align-items:center}
+
+.adminbar{background:linear-gradient(120deg,var(--pen),#215e46);color:#fff;border-radius:var(--r-md);padding:11px 16px;margin-bottom:16px;font-weight:700;font-size:.87rem;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;box-shadow:var(--sh-sm)}
+.adminbar button{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.45);color:inherit;border-radius:var(--r-sm);padding:6px 14px;font-weight:800;cursor:pointer;transition:background .15s}
+.adminbar button:hover{background:rgba(255,255,255,.32)}
+.lesson.clickable{border-style:dashed;border-right-style:solid}
+.msgs{height:270px;overflow-y:auto;background:var(--paper);border:1px solid var(--bd);border-radius:var(--r-sm);padding:10px;margin-bottom:10px;display:flex;flex-direction:column;gap:7px}
+.msg{align-self:flex-start;max-width:88%;padding:7px 11px;border-radius:13px;background:var(--card);border:1px solid var(--bd);font-size:.89rem;word-break:break-word;position:relative;box-shadow:var(--sh-sm)}
+.msg.me{align-self:flex-end;background:rgba(44,122,89,.12);border-color:var(--pen)}
+.msg .who{font-size:.7rem;color:var(--muted);font-weight:800}
+.msg .tm{font-size:.64rem;color:var(--muted)}
+.msg .mt{white-space:pre-wrap}
+.msg .del{position:absolute;left:4px;top:4px;background:transparent;border:none;color:var(--red);cursor:pointer;font-weight:800}
+.send-row{display:flex;gap:8px}
+.send-row .field{margin:0;flex:1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:var(--r-lg);padding:17px;box-shadow:var(--sh-sm);transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:var(--sh-md)}
+.home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.title{font-size:.98rem;font-weight:800;margin-bottom:13px;display:flex;justify-content:space-between;align-items:center;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--bd-soft)}
+.title span.t{background:none;padding:0;display:flex;align-items:center;gap:10px}
+.badge{font-size:.7rem;color:var(--green);font-weight:800;background:var(--hl);padding:3px 9px;border-radius:20px}
+.empty{text-align:center;color:var(--muted);font-size:.86rem;padding:14px 6px}
+
+.news-item{background:var(--paper);border:1px solid var(--bd-soft);border-right:4px solid var(--pen);border-radius:var(--r-sm);padding:10px 13px;margin-bottom:8px;position:relative}
+.news-item.holiday{border-color:var(--red);background:rgba(214,69,69,.07)}
+.news-item.exam{border-color:var(--amber);background:rgba(201,138,0,.08)}
+.news-tag{font-size:.72rem;font-weight:800;color:var(--muted)}
+.news-text{font-size:.91rem;margin-top:3px;white-space:pre-wrap;word-break:break-word}
+.x-btn{position:absolute;left:8px;top:8px;background:transparent;border:1px solid var(--red);color:var(--red);border-radius:6px;width:23px;height:23px;cursor:pointer;font-weight:800}
+
+.poll-opt{position:relative;overflow:hidden;border:1px solid var(--bd);border-radius:var(--r-sm);padding:10px 13px;margin-bottom:8px;cursor:pointer;background:var(--paper);transition:border-color .15s}
+.poll-opt:hover{border-color:var(--pen)}
+.poll-opt.locked{cursor:default}
+.poll-opt.mine{border-color:var(--pen);border-width:1.5px}
+.poll-fill{position:absolute;top:0;right:0;bottom:0;background:rgba(44,122,89,.15);transition:width .4s}
+.poll-row{position:relative;display:flex;justify-content:space-between;font-weight:700;font-size:.91rem}
+
+.exam-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px dashed var(--bd);gap:8px}
+.exam-row:last-child{border:none;padding-bottom:0}
+.pill{font-size:.78rem;font-weight:800;padding:4px 11px;border-radius:20px;background:var(--hl);color:var(--pen);white-space:nowrap}
+.pill.hot{background:rgba(214,69,69,.14);color:var(--red)}
+
+.soon-day{font-weight:800;font-size:.82rem;color:var(--pen);margin:10px 0 5px;display:flex;align-items:center;gap:6px}
+.soon-day::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--pen)}
+.hw-line{display:flex;gap:9px;align-items:flex-start;padding:7px 0;font-size:.89rem}
+.hw-line b{white-space:nowrap}
+.hw-line.done .hw-text{text-decoration:line-through;opacity:.5}
+input[type=checkbox]{width:18px;height:18px;accent-color:var(--green);margin-top:3px;flex:none;cursor:pointer}
+
+.controls{background:var(--card);border:1px solid var(--bd);border-radius:var(--r-lg);padding:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:16px;box-shadow:var(--sh-sm)}
+.tabs{display:flex;gap:5px;flex-wrap:wrap;background:var(--paper);padding:4px;border-radius:30px}
+.tab{background:transparent;border:none;color:var(--muted);padding:7px 15px;border-radius:24px;font-weight:700;font-size:.88rem;cursor:pointer;transition:background .15s,color .15s}
+.tab.active{background:var(--pen);color:var(--pen-ink)}
+.tab:not(.active):hover{background:var(--bd-soft);color:var(--ink)}
+.search{background:var(--paper);border:1px solid var(--bd);color:var(--ink);padding:8px 16px;border-radius:24px;outline:none;width:230px;font-size:.88rem}
+.search:focus{border-color:var(--pen)}
+
+.days{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:22px}
+.day{background:var(--card);border:1px solid var(--bd);border-radius:var(--r-lg);padding:15px;box-shadow:var(--sh-sm)}
+.day.today{border:1.5px solid var(--pen);box-shadow:var(--sh-md)}
+.day-head{display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:1.03rem;border-bottom:1px solid var(--bd-soft);padding-bottom:9px;margin-bottom:11px}
+.day-head small{font-size:.72rem;color:var(--muted);font-weight:700;background:var(--paper);padding:3px 9px;border-radius:12px}
+.day.today .day-head small{color:var(--pen-ink);background:var(--pen)}
+.lesson{--c:#2447b8;display:flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--bd-soft);border-right:4px solid var(--c);border-radius:var(--r-sm);padding:9px 11px;margin-bottom:7px;transition:transform .15s}
+.lesson.now{background:var(--hl);box-shadow:0 0 0 1.5px var(--c)}
+.lesson.next{outline:1.5px dashed var(--c);outline-offset:1px}
+.lesson.done{opacity:.5}
+.lesson.clickable{cursor:pointer}
+.lesson.clickable:hover{transform:translateX(-2px)}
+.num{width:24px;height:24px;border-radius:50%;background:var(--c);color:#fff;font-size:.76rem;font-weight:800;display:grid;place-items:center;flex:none}
+.l-main{flex:1;min-width:0}
+.l-name{font-weight:800;font-size:.95rem}
+.l-time{font-size:.71rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.l-ico{font-size:1.15rem}
+.hw{background:rgba(214,69,69,.07);border:1px dashed var(--red);border-radius:var(--r-sm);padding:7px 11px;margin:0 0 8px;font-size:.83rem;display:flex;gap:8px;align-items:flex-start}
+.hw.done{background:rgba(46,139,87,.09);border-color:var(--green)}
+.hw.done .hw-text{text-decoration:line-through;opacity:.6}
+.hw-text{word-break:break-word;white-space:pre-wrap}
+.holiday-box{text-align:center;padding:34px 10px;color:var(--red);font-weight:800}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.stat{background:var(--card);border:1px solid var(--bd);border-radius:var(--r-lg);padding:15px;text-align:center;box-shadow:var(--sh-sm);display:flex;flex-direction:column;align-items:center;gap:4px}
+.stat .ic{width:38px;height:38px;border-radius:11px;background:var(--hl);display:grid;place-items:center;font-size:1.1rem;margin-bottom:2px}
+.stat .v{font-size:1.2rem;font-weight:800}
+.stat .k{font-size:.78rem;color:var(--muted);font-weight:600}
+
+/* ====== نظام النقاط والستريك والتحديات ====== */
+.hud{display:flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--bd);padding:5px 10px;border-radius:30px;box-shadow:var(--sh-sm)}
+.hud-pill{display:flex;align-items:center;gap:4px;font-size:.78rem;font-weight:800;padding:3px 10px;border-radius:20px;white-space:nowrap}
+.hud-xp{color:var(--pen);background:var(--hl)}
+.hud-streak{color:var(--amber);background:rgba(201,138,0,.14)}
+.checkin-btn{background:linear-gradient(120deg,var(--amber),#b4790e);color:#1a1200;border:none;border-radius:20px;padding:7px 14px;font-size:.78rem;font-weight:800;cursor:pointer;transition:transform .15s}
+.checkin-btn:hover{transform:translateY(-1px)}
+.checkin-btn:disabled{opacity:.6;cursor:default;transform:none}
+
+.quiz-box{background:var(--hl);border:1px solid var(--bd-soft);border-radius:var(--r-md);padding:14px}
+.quiz-q{font-weight:800;font-size:.95rem;margin-bottom:10px}
+.quiz-winners{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.win-tag{font-size:.72rem;background:rgba(201,138,0,.16);color:var(--amber);padding:3px 10px;border-radius:12px;font-weight:800}
+
+.shop-item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px;border:1px solid var(--bd);border-radius:var(--r-md);background:var(--paper);margin-bottom:9px}
+.shop-info b{font-size:.9rem;display:block}
+.shop-info small{font-size:.75rem;color:var(--muted)}
+.lb-row{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-radius:var(--r-sm);background:var(--paper);margin-bottom:7px;font-weight:700;font-size:.89rem}
+.lb-row.top1{background:linear-gradient(90deg,rgba(201,138,0,.18),transparent);border:1px solid rgba(201,138,0,.4)}
+
+.rps-btns{display:flex;gap:10px;justify-content:center;margin:14px 0;flex-wrap:wrap}
+.rps-btn{font-size:1.8rem;background:var(--paper);border:1px solid var(--bd);border-radius:16px;padding:12px 18px;cursor:pointer;transition:transform .15s}
+.rps-btn:hover{transform:translateY(-2px)}
+.xo-board{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:230px;margin:12px auto}
+.xo-cell{aspect-ratio:1;background:var(--paper);border:1px solid var(--bd);border-radius:12px;font-size:1.7rem;font-weight:800;display:grid;place-items:center;cursor:pointer}
+.msg.anon .who{color:var(--pen)}
+
+.admin-link{display:inline-flex;align-items:center;gap:6px;margin:16px auto 30px;color:var(--muted);font-size:.8rem;cursor:pointer;background:var(--card);border:1px solid var(--bd);padding:8px 16px;border-radius:30px;width:fit-content;justify-content:center}
+.admin-link:hover{color:var(--pen);border-color:var(--pen)}
+.foot-wrap{display:flex;justify-content:center}
+
+/* نوافذ */
+.overlay{position:fixed;inset:0;background:rgba(8,12,10,.58);backdrop-filter:blur(5px);display:none;justify-content:center;align-items:center;z-index:9999;padding:14px}
+.overlay.show{display:flex}
+.modal{background:var(--card);color:var(--ink);border:1px solid var(--bd);border-radius:var(--r-lg);padding:24px;width:100%;max-width:440px;text-align:center;box-shadow:var(--sh-lg)}
+.modal h3{margin-bottom:12px;font-size:1.08rem;display:flex;align-items:center;justify-content:center;gap:8px}
+.field{width:100%;padding:11px 13px;margin:8px 0;background:var(--paper);border:1px solid var(--bd);color:var(--ink);border-radius:var(--r-sm);outline:none;font-size:.93rem;transition:border-color .15s}
+.field:focus{border-color:var(--pen)}
+textarea.field{height:84px;resize:vertical}
+.btn{background:var(--pen);color:var(--pen-ink);border:none;padding:11px 18px;border-radius:var(--r-sm);font-weight:800;cursor:pointer;font-size:.9rem;transition:filter .15s,transform .15s}
+.btn:hover{filter:brightness(1.07)}
+.btn:active{transform:scale(.98)}
+.btn.green{background:var(--green);color:var(--pen-ink)}
+.btn.ghost{background:transparent;border:1px solid var(--red);color:var(--red)}
+.btn.block{width:100%}
+.row{display:flex;gap:10px;margin-top:9px}
+.row .btn{flex:1}
+
+#sync{position:fixed;bottom:12px;left:12px;background:var(--card);border:1px solid var(--bd);padding:6px 13px;border-radius:20px;font-size:.73rem;box-shadow:var(--sh-md);z-index:50}
+#toast{position:fixed;bottom:60px;left:50%;transform:translateX(-50%);background:#1c2420;color:#fff;padding:10px 18px;border-radius:var(--r-sm);font-size:.87rem;opacity:0;pointer-events:none;transition:opacity .3s;z-index:99999;max-width:90vw;text-align:center;box-shadow:var(--sh-lg)}
+#toast.show{opacity:1}
+
+/* ===== تخطيط الموبايل ===== */
+.bottom-nav{display:none}
+.chatwrap{}
+@media (max-width:700px){
+  body{padding:12px 10px 110px}
+  .chatwrap{display:contents}
+  #commHead{display:none}
+  .bottom-nav{display:flex;position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:900;background:var(--card);border:1px solid var(--bd);border-radius:22px;box-shadow:var(--sh-lg);padding:6px}
+  .bottom-nav button{flex:1;background:transparent;border:none;color:var(--muted);font-size:1.18rem;display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 2px;border-radius:16px;cursor:pointer;font-family:inherit;transition:background .15s,color .15s}
+  .bottom-nav button span{font-size:.64rem;font-weight:700}
+  .bottom-nav button.on{color:var(--pen-ink);background:var(--pen)}
+  body[data-tab="home"] [data-sec]:not([data-sec="home"]),
+  body[data-tab="table"] [data-sec]:not([data-sec="table"]),
+  body[data-tab="chat"] [data-sec]:not([data-sec="chat"]),
+  body[data-tab="games"] [data-sec]:not([data-sec="games"]),
+  body[data-tab="inbox"] [data-sec]:not([data-sec="inbox"]){display:none}
+
+  .board{padding:13px 14px;margin-bottom:12px;gap:10px;border-radius:14px}
+  .brand-ico{width:38px;height:38px;font-size:1.15rem;border-radius:11px}
+  .board h1{font-size:1.1rem}
+  .board p{font-size:.76rem}
+  .board-side{width:100%;justify-content:space-between;gap:8px;flex-wrap:nowrap}
+  .clock{min-width:0;flex:1;padding:6px 10px}
+  .clock-digits{font-size:1.1rem}
+  .clock-sub{font-size:.66rem}
+  .install-btn{padding:8px 12px;font-size:.78rem;white-space:nowrap}
+  .icon-btn{width:36px;height:36px;flex:none}
+  .banner{font-size:.86rem;padding:10px 12px;margin-bottom:12px}
+  .adminbar{font-size:.78rem;margin:0 0 12px}
+  .sec-head{margin-bottom:10px}
+  .block{margin-bottom:18px}
+  .grid{grid-template-columns:1fr;gap:10px}
+  .card{padding:13px;border-radius:14px}
+  .msgs{height:calc(100vh - 270px);height:calc(100dvh - 270px);min-height:230px}
+  body[data-tab="chat"] .board, body[data-tab="chat"] .banner,
+  body[data-tab="games"] .board, body[data-tab="games"] .banner,
+  body[data-tab="inbox"] .board, body[data-tab="inbox"] .banner{display:none}
+  body[data-tab="chat"] #adminBar, body[data-tab="games"] #adminBar, body[data-tab="inbox"] #adminBar{margin-top:0}
+  .controls{padding:10px}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+  .tab{white-space:nowrap;flex:none}
+  .search{width:100%}
+  .days{grid-template-columns:1fr;gap:10px}
+  .stats{grid-template-columns:repeat(2,1fr);gap:10px}
+  .lesson{padding:10px}
+  .field,.search{font-size:16px}
+  .modal{max-height:90vh;overflow-y:auto;padding:18px;border-radius:16px}
+  #sync{bottom:76px;left:8px;font-size:.68rem}
+  #toast{bottom:92px}
+}
+</style>
+</head>
+<body data-tab="home">
+<div class="container">
+
+  <div class="topbar">
+    <div class="brand">
+      <div class="brand-ico">📓</div>
+      <div><b>دفتر الرابع ب</b><small>🏫 مدرسة أنوار البديع</small></div>
+    </div>
+    <div class="hud" id="hud">
+      <span class="hud-pill hud-streak" id="hudStreak">🔥 0</span>
+      <span class="hud-pill hud-xp" id="hudXp">💎 0 XP</span>
+    </div>
+    <div class="top-actions">
+      <button class="install-btn" id="installBtn" style="display:none">📲 ثبّت التطبيق</button>
+      <button class="icon-btn" id="bellBtn" title="الإشعارات">🔔<i class="dot" id="bellDot"></i></button>
+      <button class="icon-btn" id="themeBtn" title="تبديل الوضع">🌙</button>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-main">
+      <div class="hero-eyebrow">📍 الوضع الحالي</div>
+      <div class="hero-banner" id="banner"></div>
+      <div class="hero-chips">
+        <button class="checkin-btn" id="checkinBtn">🔥 تسجيل حضور اليوم (+25 XP)</button>
+        <span class="hero-chip" id="heroHw">📝 ...</span>
+        <span class="hero-chip" id="heroExam">⏰ ...</span>
+      </div>
+    </div>
+    <div class="hero-clock">
+      <div class="clock-digits" id="clockDigits">00:00:00</div>
+      <div class="clock-sub" id="clockSub">...</div>
+    </div>
+  </div>
+
+  <div class="adminbar" id="adminBar" style="display:none"></div>
+
+  <section class="block" data-sec="home">
+    <div class="sec-head"><span class="sec-ico">🗓️</span><h2>لمحة اليوم</h2></div>
+    <div class="grid home-grid">
+      <div class="card cat-hw">
+        <div class="title"><span class="t"><span class="cat-ico">📝</span> واجبات اليوم والدوام القادم</span></div>
+        <div id="soonBox"></div>
+      </div>
+      <div class="card cat-exam">
+        <div class="title"><span class="t"><span class="cat-ico">⏰</span> عدّاد الامتحانات</span></div>
+        <div id="examBox"></div>
+      </div>
+      <div class="card cat-news">
+        <div class="title"><span class="t"><span class="cat-ico">📢</span> التبليغات</span><span class="badge" id="liveBadge"></span></div>
+        <div id="newsBox"></div>
+      </div>
+      <div class="card cat-poll">
+        <div class="title"><span class="t"><span class="cat-ico">📊</span> استفتاء الصف</span></div>
+        <div id="pollBox"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-sec="table">
+    <div class="sec-head"><span class="sec-ico">📅</span><h2>الجدول الأسبوعي</h2></div>
+    <div class="controls">
+      <div class="tabs" id="tabs"></div>
+      <input class="search" id="search" type="search" placeholder="🔍 ابحث عن مادة أو واجب...">
+    </div>
+    <div class="days" id="days"></div>
+    <div class="stats" id="stats"></div>
+  </section>
+
+  <section class="block">
+    <div class="sec-head" id="commHead"><span class="sec-ico">💬</span><h2>التواصل</h2></div>
+    <div class="grid chatwrap">
+      <div class="card" data-sec="chat">
+        <div class="title"><span class="t">💬 شات الصف</span><span class="badge" id="chatInfo"></span></div>
+        <div class="msgs" id="chatMsgs"></div>
+        <div class="send-row"><input class="field" id="chatInput" maxlength="300" placeholder="اكتب رسالة للصف..."><button class="btn" id="chatSend">إرسال</button></div>
+        <div class="empty" style="font-size:.74rem">ممنوع الروابط، والأدمن يحذف أي رسالة مخالفة.</div>
+      </div>
+      <div class="card" data-sec="chat">
+        <div class="title"><span class="t">🕵️ صندوق الاعترافات المجهولة</span><span class="badge">هويتك مخفية</span></div>
+        <div class="msgs" id="confMsgs"></div>
+        <div class="send-row"><input class="field" id="confInput" maxlength="220" placeholder="اكتب رسالة مجهولة للصف..."><button class="btn green" id="confSend">نشر</button></div>
+      </div>
+      <div class="card" data-sec="inbox">
+        <div class="title"><span class="t" id="inboxTitle">💌 اسأل الأدمن (خاص)</span><span class="badge" id="inboxBadge"></span></div>
+        <div class="tabs" id="inboxList" style="display:none;margin-bottom:8px"></div>
+        <div class="msgs" id="inboxMsgs"></div>
+        <div class="send-row"><input class="field" id="inboxInput" maxlength="300" placeholder="اكتب سؤالك للأدمن..."><button class="btn" id="inboxSend">إرسال</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-sec="games">
+    <div class="sec-head"><span class="sec-ico">🎮</span><h2>التحدي اليومي والألعاب</h2></div>
+    <div class="grid">
+      <div class="card">
+        <div class="title"><span class="t">🧠 سؤال اليوم</span><span class="badge">+50 XP للأوائل</span></div>
+        <div id="quizBox"></div>
+      </div>
+      <div class="card">
+        <div class="title"><span class="t">🏆 أبطال الصف (Top 5)</span></div>
+        <div id="lbBox"></div>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="title"><span class="t">✊✋✌️ حجر ورقة مقص</span><span class="badge">+15 XP للفوز</span></div>
+        <div class="rps-btns">
+          <button class="rps-btn" data-rps="✊">✊</button>
+          <button class="rps-btn" data-rps="✋">✋</button>
+          <button class="rps-btn" data-rps="✌️">✌️</button>
+        </div>
+        <div id="rpsRes" style="font-weight:800;min-height:26px">اختر حركتك للبدء!</div>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="title"><span class="t">❌⭕ تحدي X-O</span><span class="badge">+20 XP للفوز</span></div>
+        <div id="xoStatus" style="font-size:.85rem;font-weight:800;color:var(--pen)">دورك (❌)</div>
+        <div class="xo-board" id="xoBoard"></div>
+        <button class="btn" id="xoReset" style="margin-top:8px">🔄 إعادة اللعب</button>
+      </div>
+      <div class="card">
+        <div class="title"><span class="t">🛒 متجر المكافآت</span><span class="badge" id="shopBalance">0 XP</span></div>
+        <div id="shopBox"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="foot-wrap" data-sec="home">
+    <div class="admin-link" id="adminLink">🔒 لوحة تحكم الأدمن</div>
+  </div>
+</div>
+
+<nav class="bottom-nav" id="bottomNav">
+  <button data-go="home" class="on">🏠<span>الرئيسية</span></button>
+  <button data-go="table">📅<span>الجدول</span></button>
+  <button data-go="chat">💬<i class="dot" id="nbChat"></i><span>الشات</span></button>
+  <button data-go="games">🎮<span>التحدي</span></button>
+  <button data-go="inbox">💌<i class="dot" id="nbInbox"></i><span>اسأل الأدمن</span></button>
+</nav>
+<div id="sync">...</div>
+<div id="toast"></div>
+
+<!-- تسجيل الاسم -->
+<div class="overlay" id="nameModal">
+  <div class="modal">
+    <h3>👋 أهلاً بيك بدفتر الصف</h3>
+    <p style="color:var(--muted);font-size:.85rem">مدرسة أنوار البديع // الرابع - ب</p>
+    <input class="field" id="nameInput" placeholder="اكتب اسمك الثلاثي..." style="text-align:center">
+    <button class="btn green block" id="nameBtn">🚀 دخول</button>
+  </div>
+</div>
+
+<!-- الأدمن -->
+<div class="overlay" id="adminModal">
+  <div class="modal">
+    <h3>👑 لوحة الأدمن</h3>
+    <div id="adminAuth">
+      <input class="field" type="email" id="adminEmail" placeholder="الإيميل..." style="text-align:center;direction:ltr" autocomplete="username">
+      <input class="field" type="password" id="adminPass" placeholder="كلمة المرور..." style="text-align:center" autocomplete="current-password">
+      <button class="btn block" id="adminLogin">دخول 🔑</button>
+    </div>
+    <div id="adminTools" style="display:none">
+      <p style="color:var(--muted);font-size:.82rem;margin-bottom:8px">تقدر هسه تضغط على أي حصة لتسجيل الواجب ✏️</p>
+      <div class="row"><button class="btn" id="aNews">📢 تبليغ</button><button class="btn" id="aPoll">📊 استفتاء</button></div>
+      <div class="row"><button class="btn" id="aExam">⏰ امتحان</button><button class="btn green" id="aExport">📥 نسخة data.json</button></div>
+      <div class="row"><button class="btn" id="aQuiz">🧠 سؤال اليوم</button><button class="btn" id="aStudents">👥 الطلاب المسجّلين</button></div>
+      <div class="row"><button class="btn ghost" id="aLogout">تسجيل خروج</button><button class="btn ghost" data-close="adminModal">إغلاق</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="notifModal">
+  <div class="modal">
+    <h3>🔔 الإشعارات</h3>
+    <div id="notifList" style="max-height:48vh;overflow-y:auto;text-align:right"></div>
+    <p style="color:var(--muted);font-size:.76rem;margin:8px 0">إشعارات الجهاز تظهر وقت يكون الموقع مفتوح أو بالخلفية. إذا الموقع مسكّر تماماً ما توصل.</p>
+    <div class="row"><button class="btn" id="notifPerm">🔔 فعّل إشعارات الجهاز</button></div>
+    <div class="row"><button class="btn green" id="notifClear">مسح كل الإشعارات</button><button class="btn ghost" data-close="notifModal">إغلاق</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="installModal">
+  <div class="modal">
+    <h3>📲 تثبيت التطبيق</h3>
+    <p id="installHelp" style="line-height:1.9;font-size:.95rem"></p>
+    <div class="row"><button class="btn" data-close="installModal">تمام</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="studentsModal">
+  <div class="modal">
+    <h3>👥 الطلاب <span class="pill" id="studentsCount"></span></h3>
+    <div class="tabs" id="studentsTabs" style="justify-content:center;margin-bottom:8px">
+      <button class="tab active" data-mode="all">الكل</button>
+      <button class="tab" data-mode="today">زاروا اليوم</button>
+      <button class="tab" data-mode="voters">صوّتوا بالاستفتاء</button>
+    </div>
+    <div id="studentsList" style="max-height:50vh;overflow-y:auto;text-align:right"></div>
+    <div class="row"><button class="btn green" id="studentsCopy">📋 نسخ الأسماء</button><button class="btn ghost" data-close="studentsModal">إغلاق</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="newsModal">
+  <div class="modal">
+    <h3>📢 تبليغ جديد</h3>
+    <select class="field" id="newsType">
+      <option value="info">ℹ️ تبليغ عام</option>
+      <option value="holiday">🚨 عطلة رسمية</option>
+      <option value="exam">📝 تبليغ امتحان</option>
+    </select>
+    <textarea class="field" id="newsText" placeholder="اكتب نص التبليغ..."></textarea>
+    <div class="row"><button class="btn" id="newsSave">نشر 📡</button><button class="btn ghost" data-close="newsModal">إلغاء</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="pollModal">
+  <div class="modal">
+    <h3>📊 استفتاء جديد</h3>
+    <input class="field" id="pollQ" placeholder="السؤال...">
+    <input class="field" id="pollA" placeholder="الخيار الأول">
+    <input class="field" id="pollB" placeholder="الخيار الثاني">
+    <p style="color:var(--muted);font-size:.78rem">الاستفتاء الجديد يصفّر الأصوات ويسمح للكل بالتصويت من جديد.</p>
+    <div class="row"><button class="btn" id="pollSave">إطلاق 🚀</button><button class="btn ghost" data-close="pollModal">إلغاء</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="examModal">
+  <div class="modal">
+    <h3>⏰ إضافة امتحان</h3>
+    <select class="field" id="examSubject"></select>
+    <input class="field" type="date" id="examDate">
+    <div class="row"><button class="btn" id="examSave">حفظ 💾</button><button class="btn ghost" data-close="examModal">إلغاء</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="quizModal">
+  <div class="modal">
+    <h3>🧠 سؤال اليوم</h3>
+    <input class="field" id="qQuestion" placeholder="اكتب السؤال...">
+    <input class="field" id="qAnswer" placeholder="الإجابة الصحيحة (كلمة أو رقم قصير)">
+    <p style="color:var(--muted);font-size:.78rem">أول طالب يجاوب صح يحصل 50 XP وتظهر إجابته للكل بعدها.</p>
+    <div class="row"><button class="btn" id="qSave">نشر 🚀</button><button class="btn ghost" data-close="quizModal">إلغاء</button></div>
+  </div>
+</div>
+
+<div class="overlay" id="hwModal">
+  <div class="modal">
+    <h3 id="hwTitle">الواجب</h3>
+    <textarea class="field" id="hwText" placeholder="اكتب الواجب المطلوب... (اتركه فارغ للحذف)"></textarea>
+    <div class="row"><button class="btn" id="hwSave">حفظ 💾</button><button class="btn ghost" data-close="hwModal">إلغاء</button></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ================= الإعدادات ================= */
+  var CONFIG = {
+    // ضع رابط قاعدة Firebase Realtime Database هنا حتى تتزامن البيانات بين كل الطلاب.
+    // مثال: "https://my-class-default-rtdb.firebaseio.com"
+    // إذا تركته فارغ يشتغل الموقع بالطريقة القديمة (data.json + المتصفح).
+    FIREBASE_URL: "https://four-4-eed06-default-rtdb.europe-west1.firebasedatabase.app",
+    // Web API Key من Firebase: Project settings ← General. إذا ملأته يصير دخول الأدمن بإيميل وكلمة سر من Firebase Auth
+    API_KEY: "AIzaSyA_T62QJH0hdgMpZAhntr5pf6q_dzpzMUM",
+    SALT: "",
+    ADMIN_HASH: "",
+    POLL_MS: 20000,
+    // أوقات الحصص (عدّلها حسب الواقع)
+    LESSON_TIMES: [["13:00","13:40"],["13:50","14:30"],["14:40","15:20"],["15:30","16:10"],["16:20","17:00"]]
+  };
+  var REMOTE = !!CONFIG.FIREBASE_URL;
+
+  var DAYS = [
+    { id: "sat", name: "السبت", dow: 6 },
+    { id: "sun", name: "الأحد", dow: 0 },
+    { id: "mon", name: "الإثنين", dow: 1 },
+    { id: "tue", name: "الثلاثاء", dow: 2 },
+    { id: "wed", name: "الأربعاء", dow: 3, holiday: true },
+    { id: "thu", name: "الخميس", dow: 4 }
+  ];
+  var SUBJECTS = {
+    "رياضيات": { icon: "📐", color: "#2447b8", sci: true },
+    "احياء":   { icon: "🧬", color: "#2e8b57", sci: true },
+    "كيمياء":  { icon: "🧪", color: "#7b3fb8", sci: true },
+    "فيزياء":  { icon: "⚙️", color: "#d64545", sci: true },
+    "إنجليزي": { icon: "🔤", color: "#e07b00", sci: false },
+    "إسلامية": { icon: "📘", color: "#0e8a8a", sci: false },
+    "عربي":    { icon: "📒", color: "#8a5a2b", sci: false },
+    "جرائم":   { icon: "👓", color: "#667085", sci: false }
+  };
+  var TIMETABLE = {
+    sat: ["رياضيات","إسلامية","كيمياء","فيزياء","إنجليزي"],
+    sun: ["رياضيات","عربي","كيمياء","إسلامية","احياء"],
+    mon: ["كيمياء","احياء","عربي","فيزياء","رياضيات"],
+    tue: ["عربي","عربي","إنجليزي","جرائم","رياضيات"],
+    thu: ["إنجليزي","احياء","فيزياء","إنجليزي","عربي"]
+  };
+  var NAME_TO_ID = {}; DAYS.forEach(function (d) { NAME_TO_ID[d.name] = d.id; });
+  var DEFAULT_POLL = { id: 1, question: "ما رأيك بمستوى أسئلة الامتحانات؟", opt0: "سهلة جداً", opt1: "صعبة وتحتاج تركيز" };
+
+  /* ================= أدوات ================= */
+  function $(id) { return document.getElementById(id); }
+  function h(tag, props) {
+    var e = document.createElement(tag);
+    props = props || {};
+    Object.keys(props).forEach(function (k) {
+      var v = props[k];
+      if (k === "class") e.className = v;
+      else if (k === "text") e.textContent = v;
+      else if (k === "checked") e.checked = !!v;
+      else if (k.indexOf("on") === 0) e.addEventListener(k.slice(2), v);
+      else e.setAttribute(k, v);
+    });
+    for (var i = 2; i < arguments.length; i++) {
+      var c = arguments[i];
+      if (c === null || c === undefined || c === false) continue;
+      if (Array.isArray(c)) { c.forEach(function (x) { if (x) e.appendChild(x); }); }
+      else e.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
+    }
+    return e;
+  }
+  function clear(el) { while (el.firstChild) el.removeChild(el.firstChild); }
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+  function mins(s) { var p = s.split(":"); return +p[0] * 60 + +p[1]; }
+  function t12(s) { var p = s.split(":"); var hh = +p[0]; var suf = hh >= 12 ? "م" : "ص"; hh = hh % 12 || 12; return hh + ":" + p[1] + " " + suf; }
+  function toast(msg) {
+    var t = $("toast"); t.textContent = msg; t.classList.add("show");
+    clearTimeout(toast._t); toast._t = setTimeout(function () { t.classList.remove("show"); }, 2800);
+  }
+  function openModal(id) { $(id).classList.add("show"); }
+  function closeModal(id) { $(id).classList.remove("show"); }
+  function lsGet(k, d) { try { var v = localStorage.getItem(k); return v === null ? d : v; } catch (e) { return d; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function num(x) { x = +x; return isFinite(x) && x > 0 ? x : 0; }
+
+  /* ================= البيانات ================= */
+  var state = normalize(null);
+  var auth = null;
+  try { auth = JSON.parse(sessionStorage.getItem("fbauth") || "null"); } catch (e) { auth = null; }
+  var isAdmin = false;
+  if (CONFIG.API_KEY) isAdmin = !!auth;
+  else { try { isAdmin = sessionStorage.getItem("adm") === "1"; } catch (e) {} }
+  var doneMap = {};
+  try { doneMap = JSON.parse(lsGet("hw_done_v2", "{}")) || {}; } catch (e) { doneMap = {}; }
+  var filterDay = "all";
+  var activeHwKey = null;
+
+  /* ================= نظام النقاط والستريك ================= */
+  var profile = { xp: 50, streak: 0, lastCheckin: "", color: "", badge: "" };
+  try { profile = Object.assign(profile, JSON.parse(lsGet("player_profile", "{}"))); } catch (e) {}
+  function todayKey() { var d = new Date(); return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); }
+  function saveProfile() {
+    lsSet("player_profile", JSON.stringify(profile));
+    renderHud(); renderShop();
+    var n = lsGet("final_student_name", null);
+    if (n && REMOTE) {
+      rtroot("PUT", "xp/" + getSid(), { name: n, xp: profile.xp, streak: profile.streak, color: profile.color, badge: profile.badge, ts: Date.now() }).catch(function () {});
+    }
+  }
+  function addXp(amount, reason) { profile.xp += amount; saveProfile(); toast("+" + amount + " XP 💎 (" + reason + ")"); }
+  function renderHud() {
+    var hx = $("hudXp"), hs = $("hudStreak");
+    if (hx) hx.textContent = "💎 " + profile.xp + " XP";
+    if (hs) hs.textContent = "🔥 " + profile.streak;
+    var bal = $("shopBalance"); if (bal) bal.textContent = profile.xp + " XP";
+    var btn = $("checkinBtn");
+    if (btn) {
+      if (profile.lastCheckin === todayKey()) { btn.textContent = "✔ تم تسجيل حضور اليوم"; btn.disabled = true; }
+      else { btn.textContent = "🔥 تسجيل حضور اليوم (+25 XP)"; btn.disabled = false; }
+    }
+  }
+  function doCheckin() {
+    var tk = todayKey();
+    if (profile.lastCheckin === tk) return;
+    var yest = new Date(Date.now() - 864e5);
+    var yk = yest.getFullYear() + "-" + (yest.getMonth() + 1) + "-" + yest.getDate();
+    profile.streak = (profile.lastCheckin === yk) ? profile.streak + 1 : 1;
+    profile.lastCheckin = tk;
+    addXp(25, "حضور يومي 🔥");
+  }
+
+  var SHOP_ITEMS = [
+    { id: "title", cost: 100, icon: "👑", name: "لقب مخصص بالشات", desc: "يظهر لقب خاص جنب اسمك" },
+    { id: "gold", cost: 150, icon: "✨", name: "اسم مميز بالشات", desc: "يميز اسمك بالشات" }
+  ];
+  function renderShop() {
+    var box = $("shopBox"); if (!box) return; clear(box);
+    SHOP_ITEMS.forEach(function (it) {
+      var owned = (it.id === "gold" && profile.color === "gold");
+      box.appendChild(h("div", { "class": "shop-item" },
+        h("div", { "class": "shop-info" }, h("b", { text: it.icon + " " + it.name }), h("small", { text: it.desc })),
+        h("button", {
+          "class": "btn", disabled: owned || profile.xp < it.cost,
+          text: owned ? "مُفعّل ✔" : it.cost + " XP",
+          onclick: function () {
+            if (profile.xp < it.cost || owned) return;
+            if (it.id === "title") {
+              var t = prompt("اكتب اللقب (حد أقصى 12 حرف):");
+              if (!t || !t.trim()) return;
+              profile.xp -= it.cost; profile.badge = t.trim().slice(0, 12); saveProfile();
+            } else if (it.id === "gold") {
+              profile.xp -= it.cost; profile.color = "gold"; saveProfile();
+            }
+            toast("تم الشراء بنجاح ✔");
+          }
+        })));
+    });
+  }
+  function pullLeaderboard() {
+    if (!REMOTE) return;
+    rtroot("GET", "xp").then(function (d) {
+      var list = d ? Object.keys(d).map(function (k) { return d[k]; }).sort(function (a, b) { return (b.xp || 0) - (a.xp || 0); }).slice(0, 5) : [];
+      var box = $("lbBox"); if (!box) return; clear(box);
+      if (!list.length) { box.appendChild(h("div", { "class": "empty", text: "كن أول المتصدرين! 🔥" })); return; }
+      var medals = ["🥇", "🥈", "🥉", "4️⃣", "5️⃣"];
+      list.forEach(function (u, i) {
+        box.appendChild(h("div", { "class": "lb-row" + (i === 0 ? " top1" : "") },
+          h("span", { text: medals[i] + " " + (u.name || "طالب") + (u.badge ? " [" + u.badge + "]" : "") }),
+          h("span", { style: "color:var(--pen)", text: (u.xp || 0) + " XP 🔥" + (u.streak || 0) })));
+      });
+    }).catch(function () {});
+  }
+
+  /* ================= سؤال اليوم ================= */
+  var dailyQuiz = null;
+  function pullQuiz() {
+    if (!REMOTE) return;
+    rtroot("GET", "dailyQuiz").then(function (q) { dailyQuiz = q; renderQuiz(); }).catch(function () {});
+  }
+  function renderQuiz() {
+    var box = $("quizBox"); if (!box) return; clear(box);
+    if (!REMOTE) { box.appendChild(h("div", { "class": "empty", text: "يحتاج ربط السيرفر" })); return; }
+    if (!dailyQuiz || !dailyQuiz.q) { box.appendChild(h("div", { "class": "empty", text: "لا يوجد سؤال نشط حالياً" })); return; }
+    var solved = lsGet("quiz_solved_" + dailyQuiz.id, "") === "1";
+    var winners = dailyQuiz.winners ? Object.keys(dailyQuiz.winners).map(function (k) { return dailyQuiz.winners[k]; }) : [];
+    var wrap = h("div", { "class": "quiz-box" }, h("div", { "class": "quiz-q", text: "❓ " + dailyQuiz.q }));
+    if (solved || isAdmin) {
+      wrap.appendChild(h("div", { style: "color:var(--pen);font-weight:800;font-size:.85rem", text: "✔ الإجابة: " + dailyQuiz.a }));
+      if (winners.length) {
+        var wbox = h("div", { "class": "quiz-winners" });
+        winners.slice(0, 10).forEach(function (w) { wbox.appendChild(h("span", { "class": "win-tag", text: "🏅 " + (w.name || "طالب") })); });
+        wrap.appendChild(wbox);
+      }
+    } else {
+      var inp = h("input", { "class": "field", placeholder: "اكتب إجابتك..." });
+      wrap.appendChild(inp);
+      wrap.appendChild(h("button", { "class": "btn block", text: "إرسال 🎯", onclick: function () {
+        if (inp.value.trim().toLowerCase() === String(dailyQuiz.a).trim().toLowerCase()) {
+          lsSet("quiz_solved_" + dailyQuiz.id, "1"); addXp(50, "حل سؤال اليوم 🧠");
+          rtroot("PUT", "dailyQuiz/winners/" + getSid(), { name: myName().split(/\s+/)[0], ts: Date.now() }).then(renderQuiz);
+        } else { toast("❌ إجابة خاطئة!"); }
+      } }));
+    }
+    box.appendChild(wrap);
+  }
+
+  /* ================= الاعترافات المجهولة ================= */
+  var confessions = [];
+  function pullConfessions() {
+    if (!REMOTE || document.hidden) return;
+    rtroot("GET", "confessions", undefined, "orderBy=" + encodeURIComponent('"$key"') + "&limitToLast=30").then(function (d) {
+      confessions = d ? Object.keys(d).sort().map(function (k) { return Object.assign({ id: k }, d[k]); }) : [];
+      renderConfessions();
+    }).catch(function () {});
+  }
+  function renderConfessions() {
+    var box = $("confMsgs"); if (!box) return;
+    if (!REMOTE) { clear(box); box.appendChild(h("div", { "class": "empty", text: "يحتاج ربط السيرفر" })); return; }
+    stickBottom(box, function () {
+      clear(box);
+      if (!confessions.length) { box.appendChild(h("div", { "class": "empty", text: "لا توجد اعترافات بعد، كوون أول وحد! 🎭" })); return; }
+      confessions.forEach(function (c) {
+        box.appendChild(h("div", { "class": "msg anon" },
+          isAdmin ? h("button", { "class": "del", text: "✕", onclick: function () { delConfession(c.id); } }) : null,
+          h("div", { "class": "who", text: "🎭 مجهول" }),
+          h("div", { "class": "mt", text: String(c.text || "") })));
+      });
+    });
+  }
+  function sendConfession() {
+    var inp = $("confInput"), text = inp.value.trim();
+    if (!text) return;
+    if (!REMOTE) { toast("يحتاج ربط السيرفر"); return; }
+    if (hasLink(text)) { toast("🚫 ممنوع إرسال الروابط"); return; }
+    if (tooFast()) return;
+    inp.value = "";
+    rtroot("PUT", "confessions/" + newMsgId(), { text: text, ts: Date.now() }).then(function () { toast("نُشرت بسرية 🕵️"); pullConfessions(); }).catch(function () { toast("⚠️ ما انرسلت"); });
+  }
+  function delConfession(id) {
+    confessions = confessions.filter(function (c) { return c.id !== id; }); renderConfessions();
+    rtroot("DELETE", "confessions/" + id).catch(function () { toast("⚠️ ما انحذفت"); });
+  }
+
+  /* ================= الألعاب الخفيفة ================= */
+  function initGames() {
+    document.querySelectorAll("[data-rps]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var user = btn.getAttribute("data-rps"), choices = ["✊", "✋", "✌️"], bot = choices[Math.floor(Math.random() * 3)];
+        var res = $("rpsRes");
+        if (user === bot) res.textContent = "تعادل! (" + bot + ")";
+        else if ((user === "✊" && bot === "✌️") || (user === "✋" && bot === "✊") || (user === "✌️" && bot === "✋")) {
+          res.textContent = "🎉 فزت! (" + bot + ")"; addXp(15, "حجر ورقة مقص");
+        } else { res.textContent = "😅 خسرت! (" + bot + ")"; }
+      });
+    });
+
+    var board = Array(9).fill(""), active = true;
+    function renderXO() {
+      var b = $("xoBoard"); if (!b) return; clear(b);
+      board.forEach(function (cell, idx) {
+        b.appendChild(h("div", { "class": "xo-cell", text: cell, onclick: function () {
+          if (!active || board[idx]) return;
+          board[idx] = "❌"; renderXO();
+          if (checkWin(board, "❌")) { active = false; $("xoStatus").textContent = "🎉 فزت!"; addXp(20, "إكس-أو"); return; }
+          if (board.every(function (v) { return v !== ""; })) { active = false; $("xoStatus").textContent = "تعادل!"; return; }
+          setTimeout(function () {
+            var empty = board.map(function (v, i) { return v === "" ? i : -1; }).filter(function (i) { return i !== -1; });
+            if (!empty.length) return;
+            board[empty[Math.floor(Math.random() * empty.length)]] = "⭕"; renderXO();
+            if (checkWin(board, "⭕")) { active = false; $("xoStatus").textContent = "😅 خسرت!"; }
+            else if (board.every(function (v) { return v !== ""; })) { active = false; $("xoStatus").textContent = "تعادل!"; }
+          }, 300);
+        } }));
+      });
+    }
+    function checkWin(b, p) {
+      var lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+      return lines.some(function (l) { return l.every(function (i) { return b[i] === p; }); });
+    }
+    var resetBtn = $("xoReset");
+    if (resetBtn) resetBtn.addEventListener("click", function () { board = Array(9).fill(""); active = true; $("xoStatus").textContent = "دورك (❌)"; renderXO(); });
+    renderXO();
+  }
+
+  function toList(x) {
+    if (Array.isArray(x)) return x.map(function (v, i) { return Object.assign({ id: "a" + i }, v); });
+    if (x && typeof x === "object") return Object.keys(x).map(function (k) { return Object.assign({ id: k }, x[k]); });
+    return [];
+  }
+  function normalize(db) {
+    var s = { news: [], poll: Object.assign({}, DEFAULT_POLL), votes: [0, 0], hw: {}, exams: [] };
+    if (!db || typeof db !== "object") return s;
+    s.news = toList(db.news).map(function (n) {
+      return { id: String(n.id), type: n.type || "info", text: String(n.text || ""), ts: +n.ts || 0 };
+    }).sort(function (a, b) { return b.ts - a.ts; });
+    if (db.poll && db.poll.question) {
+      s.poll = { id: db.poll.id || 1, question: String(db.poll.question), opt0: String(db.poll.opt0 || "نعم"), opt1: String(db.poll.opt1 || "لا") };
+      if (Array.isArray(db.poll.votes)) s.votes = [num(db.poll.votes[0]), num(db.poll.votes[1])];
+    }
+    if (db.votes) {
+      if (Array.isArray(db.votes)) s.votes = [num(db.votes[0]), num(db.votes[1])];
+      else s.votes = [num(db.votes.v0), num(db.votes.v1)];
+    }
+    var hw = db.hw || {};
+    Object.keys(hw).forEach(function (k) {
+      var parts = k.split("_");
+      var did = NAME_TO_ID[parts[0]] || parts[0];
+      var key = did + "_" + parts[1];
+      if (hw[k]) s.hw[key] = String(hw[k]);
+    });
+    s.exams = toList(db.exams).filter(function (e) { return e.date && e.subject; })
+      .map(function (e) { return { id: String(e.id), subject: String(e.subject), date: String(e.date) }; })
+      .sort(function (a, b) { return a.date < b.date ? -1 : 1; });
+    return s;
+  }
+  function saveLocal() { lsSet("class_state_v2", JSON.stringify(state)); }
+  function loadLocal() {
+    var raw = lsGet("class_state_v2", null) || lsGet("app_local_data", null);
+    if (!raw) return false;
+    try { state = normalize(JSON.parse(raw)); return true; } catch (e) { return false; }
+  }
+
+  /* ================= السيرفر (Firebase REST) ================= */
+  function rtdb(method, path, body) { return rtroot(method, "class" + (path ? "/" + path : ""), body); }
+
+  /* ---- Firebase Auth (دخول الأدمن) ---- */
+  function saveAuth() { try { if (auth) sessionStorage.setItem("fbauth", JSON.stringify(auth)); else sessionStorage.removeItem("fbauth"); } catch (e) {} }
+  function setAuth(idToken, refreshToken, expiresIn, email) {
+    auth = { idToken: idToken, refreshToken: refreshToken, exp: Date.now() + (+expiresIn || 3600) * 1000, email: email || (auth && auth.email) || "" };
+    saveAuth();
+  }
+  function signIn(email, pass) {
+    return fetch("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=" + encodeURIComponent(CONFIG.API_KEY), {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: email, password: pass, returnSecureToken: true })
+    }).then(function (r) { return r.json(); }).then(function (d) {
+      if (!d.idToken) throw new Error((d.error && d.error.message) || "auth");
+      setAuth(d.idToken, d.refreshToken, d.expiresIn, email);
+    });
+  }
+  function refreshAuth() {
+    return fetch("https://securetoken.googleapis.com/v1/token?key=" + encodeURIComponent(CONFIG.API_KEY), {
+      method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: "grant_type=refresh_token&refresh_token=" + encodeURIComponent(auth.refreshToken)
+    }).then(function (r) { return r.json(); }).then(function (d) {
+      if (!d.id_token) throw new Error("refresh");
+      setAuth(d.id_token, d.refresh_token, d.expires_in);
+    }).catch(function () {
+      auth = null; saveAuth(); isAdmin = false; renderAll(); toast("انتهت جلسة الأدمن، سجّل الدخول من جديد");
+    });
+  }
+  function getAuthParam() {
+    if (!CONFIG.API_KEY || !auth) return Promise.resolve("");
+    if (Date.now() < auth.exp - 60000) return Promise.resolve("auth=" + encodeURIComponent(auth.idToken));
+    return refreshAuth().then(function () { return auth ? "auth=" + encodeURIComponent(auth.idToken) : ""; });
+  }
+  function setStatus(kind) {
+    var el = $("sync"), live = $("liveBadge");
+    if (!REMOTE) { el.textContent = "📁 وضع الملف (data.json)"; live.textContent = ""; return; }
+    if (kind === "ok") { el.textContent = "🟢 متصل ومتزامن"; live.textContent = "مباشر 🟢"; }
+    else { el.textContent = "🟠 بدون اتصال (آخر نسخة محفوظة)"; live.textContent = "غير متصل 🟠"; }
+  }
+  function push(fn) {
+    saveLocal();
+    if (!REMOTE) return;
+    fn().then(function () { setStatus("ok"); }).catch(function () {
+      setStatus("off"); toast("⚠️ ما انحفظ على السيرفر، تأكد من النت");
+    });
+  }
+  function pull() {
+    if (!REMOTE) return Promise.resolve();
+    return rtdb("GET", "").then(function (db) {
+      if (db) { var ns = normalize(db); diffAndNotify(ns); state = ns; saveLocal(); renderAll(); }
+      setStatus("ok");
+    }).catch(function () { setStatus("off"); });
+  }
+  function loadStaticFile() {
+    return fetch("data.json?c=" + Date.now()).then(function (r) { return r.json(); }).then(function (d) {
+      if (d) { state = normalize(d); saveLocal(); renderAll(); }
+    }).catch(function () {});
+  }
+
+  /* ================= الوقت والحصص ================= */
+  function dayOf(date) { for (var i = 0; i < DAYS.length; i++) if (DAYS[i].dow === date.getDay()) return DAYS[i]; return null; }
+  function isSchool(d) { return !!d && !d.holiday; }
+  function atTime(date, hhmm) { var d = new Date(date); var p = hhmm.split(":"); d.setHours(+p[0], +p[1], 0, 0); return d; }
+  var DAY_START = CONFIG.LESSON_TIMES[0][0];
+  var DAY_END = CONFIG.LESSON_TIMES[CONFIG.LESSON_TIMES.length - 1][1];
+
+  function nextSchoolDay(from) {
+    for (var i = 1; i <= 7; i++) {
+      var d = new Date(from); d.setDate(d.getDate() + i);
+      var info = dayOf(d);
+      if (isSchool(info)) return { info: info, date: d, offset: i };
+    }
+    return null;
+  }
+  function fmtCountdown(ms) {
+    if (ms < 0) ms = 0;
+    var days = Math.floor(ms / 864e5); ms -= days * 864e5;
+    var hh = Math.floor(ms / 36e5), mm = Math.floor((ms % 36e5) / 6e4), ss = Math.floor((ms % 6e4) / 1000);
+    return (days > 0 ? days + " يوم " : "") + pad(hh) + ":" + pad(mm) + ":" + pad(ss);
+  }
+
+  var lessonSig = "";
+  function lessonStatus(now) {
+    // يرجع {idx:[حالة لكل حصة], banner:نص}
+    var today = dayOf(now);
+    var res = { st: [], text: "" };
+    if (!isSchool(today)) {
+      var ns = nextSchoolDay(now);
+      res.text = (today && today.holiday ? "🛋️ اليوم عطلة رسمية" : "🛋️ اليوم عطلة") + (ns ? " — الدوام القادم: " + (ns.offset === 1 ? "باجر " : "") + ns.info.name : "");
+      return res;
+    }
+    var cur = now.getHours() * 60 + now.getMinutes();
+    var subj = TIMETABLE[today.id];
+    var found = false, nextIdx = -1;
+    CONFIG.LESSON_TIMES.forEach(function (t, i) {
+      var s = mins(t[0]), e = mins(t[1]);
+      if (cur >= e) res.st[i] = "done";
+      else if (cur >= s) { res.st[i] = "now"; found = true; res.text = "📍 الحصة الحالية: " + subj[i] + " — تنتهي الساعة " + t12(t[1]); }
+      else { res.st[i] = ""; if (nextIdx < 0) nextIdx = i; }
+    });
+    if (nextIdx >= 0) res.st[nextIdx] = found ? "" : "next";
+    if (!found) {
+      if (nextIdx === 0) res.text = "⏳ أول حصة اليوم: " + subj[0] + " الساعة " + t12(CONFIG.LESSON_TIMES[0][0]);
+      else if (nextIdx > 0) res.text = "☕ استراحة — الحصة القادمة: " + subj[nextIdx] + " الساعة " + t12(CONFIG.LESSON_TIMES[nextIdx][0]);
+      else res.text = "✅ خلص دوام اليوم، الله يعطيك العافية";
+    } else if (nextIdx >= 0) {
+      res.text += " | بعدها: " + subj[nextIdx];
+    }
+    return res;
+  }
+
+  function tick() {
+    var now = new Date(), today = dayOf(now), target, sub;
+    if (isSchool(today) && now < atTime(now, DAY_START)) { target = atTime(now, DAY_START); sub = "متبقي على بدء الدوام (" + t12(DAY_START) + ")"; }
+    else if (isSchool(today) && now <= atTime(now, DAY_END)) { target = atTime(now, DAY_END); sub = "الدوام جاري 🏫 متبقي على نهايته"; }
+    else {
+      var ns = nextSchoolDay(now);
+      target = atTime(ns.date, DAY_START);
+      sub = "متبقي على دوام " + (ns.offset === 1 ? "الغد" : ns.info.name);
+    }
+    $("clockDigits").textContent = fmtCountdown(target - now);
+    $("clockSub").textContent = sub;
+
+    var ls = lessonStatus(now);
+    var sig = ls.st.join(",") + "|" + ls.text;
+    if (sig !== lessonSig) {
+      lessonSig = sig;
+      $("banner").textContent = ls.text;
+      renderGrid(ls);
+    }
+  }
+
+  /* ================= العرض ================= */
+  function hwDone(key, text) { return !!doneMap[key + "|" + text]; }
+  function toggleDone(key, text, v) {
+    if (v) doneMap[key + "|" + text] = 1; else delete doneMap[key + "|" + text];
+    lsSet("hw_done_v2", JSON.stringify(doneMap));
+    renderGrid(); renderSoon();
+  }
+  function hwLine(key, text) {
+    var done = hwDone(key, text);
+    return h("label", { "class": "hw" + (done ? " done" : "") },
+      h("input", { type: "checkbox", checked: done, onchange: function (e) { toggleDone(key, text, e.target.checked); } }),
+      h("span", { "class": "hw-text", text: "📝 " + text }));
+  }
+
+  function renderNews() {
+    var box = $("newsBox"); clear(box);
+    if (!state.news.length) { box.appendChild(h("div", { "class": "empty", text: "لا توجد تبليغات حالياً" })); return; }
+    state.news.forEach(function (n) {
+      var tag = n.type === "holiday" ? "🚨 عطلة رسمية" : n.type === "exam" ? "📝 امتحان" : "ℹ️ تبليغ";
+      box.appendChild(h("div", { "class": "news-item " + n.type },
+        isAdmin ? h("button", { "class": "x-btn", text: "✕", onclick: function () { deleteNews(n.id); } }) : null,
+        h("div", { "class": "news-tag", text: tag }),
+        h("div", { "class": "news-text", text: n.text })));
+    });
+  }
+
+  function renderPoll() {
+    var box = $("pollBox"); clear(box);
+    var p = state.poll, v = state.votes, total = (v[0] + v[1]) || 0;
+    var mine = lsGet("voted_" + p.id, null);
+    box.appendChild(h("p", { style: "font-weight:800;margin-bottom:10px", text: p.question }));
+    [p.opt0, p.opt1].forEach(function (label, i) {
+      var pct = total ? Math.round(v[i] / total * 100) : 0;
+      box.appendChild(h("div", { "class": "poll-opt" + (mine !== null ? " locked" : "") + (mine === String(i) ? " mine" : ""), onclick: function () { vote(i); } },
+        h("div", { "class": "poll-fill", style: "width:" + pct + "%" }),
+        h("div", { "class": "poll-row" }, h("span", { text: (mine === String(i) ? "✔ " : "") + label }), h("span", { text: pct + "%" }))));
+    });
+    box.appendChild(h("div", { "class": "empty", text: total + " صوت" + (mine === null ? " — اضغط على خيارك" : "") }));
+  }
+
+  function daysLeft(dateStr) {
+    var t = new Date(); t.setHours(0, 0, 0, 0);
+    var d = new Date(dateStr + "T00:00:00");
+    return Math.round((d - t) / 864e5);
+  }
+  function renderExams() {
+    var box = $("examBox"); clear(box);
+    var list = state.exams.filter(function (e) { return daysLeft(e.date) >= 0; });
+    if (!list.length) { box.appendChild(h("div", { "class": "empty", text: "ما كو امتحانات مسجلة 😎" })); return; }
+    list.forEach(function (e) {
+      var d = daysLeft(e.date);
+      var label = d === 0 ? "اليوم!" : d === 1 ? "باجر" : "باقي " + d + " يوم";
+      var ic = SUBJECTS[e.subject] ? SUBJECTS[e.subject].icon + " " : "";
+      box.appendChild(h("div", { "class": "exam-row" },
+        h("div", {}, h("div", { style: "font-weight:800", text: ic + e.subject }), h("div", { "class": "l-time", text: e.date })),
+        h("div", { style: "display:flex;gap:6px;align-items:center" },
+          h("span", { "class": "pill" + (d <= 3 ? " hot" : ""), text: label }),
+          isAdmin ? h("button", { "class": "btn ghost", style: "padding:2px 8px", text: "✕", onclick: function () { deleteExam(e.id); } }) : null)));
+    });
+  }
+
+  function renderSoon() {
+    var box = $("soonBox"); clear(box);
+    var now = new Date(), today = dayOf(now), targets = [];
+    if (isSchool(today)) targets.push({ label: "اليوم — " + today.name, id: today.id });
+    var ns = nextSchoolDay(now);
+    if (ns) targets.push({ label: (ns.offset === 1 ? "باجر — " : "الدوام القادم — ") + ns.info.name, id: ns.info.id });
+    var any = false;
+    targets.forEach(function (t) {
+      var lines = [];
+      TIMETABLE[t.id].forEach(function (name, i) {
+        var key = t.id + "_" + i, text = state.hw[key];
+        if (!text) return;
+        var done = hwDone(key, text);
+        lines.push(h("div", { "class": "hw-line" + (done ? " done" : "") },
+          h("input", { type: "checkbox", checked: done, onchange: function (e) { toggleDone(key, text, e.target.checked); } }),
+          h("div", {}, h("b", { text: name + ": " }), h("span", { "class": "hw-text", text: text }))));
+      });
+      if (lines.length) { any = true; box.appendChild(h("div", { "class": "soon-day", text: t.label })); lines.forEach(function (l) { box.appendChild(l); }); }
+    });
+    if (!any) box.appendChild(h("div", { "class": "empty", text: "ما كو واجبات مسجلة 🎉" }));
+  }
+
+  function renderTabs() {
+    var box = $("tabs"); clear(box);
+    [{ id: "all", name: "الكل" }].concat(DAYS).forEach(function (d) {
+      box.appendChild(h("button", { "class": "tab" + (filterDay === d.id ? " active" : ""), text: d.name, onclick: function () { filterDay = d.id; renderTabs(); renderGrid(); } }));
+    });
+  }
+
+  function renderGrid(ls) {
+    var grid = $("days"); clear(grid);
+    var now = new Date(), today = dayOf(now);
+    ls = ls || lessonStatus(now);
+    var q = $("search").value.trim().toLowerCase();
+    DAYS.forEach(function (d) {
+      if (filterDay !== "all" && filterDay !== d.id) return;
+      var isToday = today && today.id === d.id;
+      var card = h("div", { "class": "day" + (isToday ? " today" : "") });
+      card.appendChild(h("div", { "class": "day-head" }, h("span", { text: d.name }),
+        h("small", { text: isToday ? "اليوم" : d.holiday ? "عطلة رسمية" : "5 حصص" })));
+      var matches = 0;
+      if (d.holiday) {
+        if (!q || "عطلة".indexOf(q) !== -1) { matches++; card.appendChild(h("div", { "class": "holiday-box", text: "🛋️ عطلة رسمية" })); }
+      } else {
+        TIMETABLE[d.id].forEach(function (name, i) {
+          var key = d.id + "_" + i, hw = state.hw[key], sb = SUBJECTS[name] || { icon: "📚", color: "#2447b8" };
+          if (q && name.toLowerCase().indexOf(q) === -1 && !(hw && hw.toLowerCase().indexOf(q) !== -1)) return;
+          matches++;
+          var cls = "lesson" + (isAdmin ? " clickable" : "") + (isToday && ls.st[i] ? " " + ls.st[i] : "");
+          var t = CONFIG.LESSON_TIMES[i];
+          card.appendChild(h("div", { "class": cls, style: "--c:" + sb.color, onclick: function () { if (isAdmin) openHw(key, name, d.name); } },
+            h("span", { "class": "num", text: String(i + 1) }),
+            h("div", { "class": "l-main" }, h("div", { "class": "l-name", text: name }), h("div", { "class": "l-time", text: t12(t[0]) + " - " + t12(t[1]) })),
+            h("span", { "class": "l-ico", text: isAdmin ? "✏️" : sb.icon })));
+          if (hw) card.appendChild(hwLine(key, hw));
+        });
+      }
+      if (matches) grid.appendChild(card);
+    });
+    if (!grid.firstChild) grid.appendChild(h("div", { "class": "empty", text: "ما لقيت نتائج 🔍" }));
+  }
+
+  function renderStats() {
+    var box = $("stats"); clear(box);
+    var sci = 0, oth = 0;
+    Object.keys(TIMETABLE).forEach(function (k) { TIMETABLE[k].forEach(function (n) { if (SUBJECTS[n] && SUBJECTS[n].sci) sci++; else oth++; }); });
+    var hwCount = Object.keys(state.hw).length;
+    [["⚛️", "الحصص العلمية", sci + " حصة", "var(--green)"], ["📖", "الحصص الأدبية", oth + " حصة", "var(--amber)"],
+     ["📅", "العطلة الرسمية", "الأربعاء", "var(--red)"], ["📝", "واجبات مسجلة", hwCount + "", "var(--pen)"]].forEach(function (s) {
+      box.appendChild(h("div", { "class": "stat" }, h("div", { "class": "ic", text: s[0] }), h("div", { "class": "k", text: s[1] }), h("div", { "class": "v", style: "color:" + s[3], text: s[2] })));
+    });
+  }
+
+  function renderAdminBar() {
+    var bar = $("adminBar"); clear(bar);
+    if (!isAdmin) { bar.style.display = "none"; return; }
+    bar.style.display = "flex";
+    bar.appendChild(h("span", { text: "👑 وضع الأدمن: اضغط على أي حصة (✏️) لإضافة أو تعديل واجبها" }));
+    bar.appendChild(h("button", { text: "لوحة التحكم", onclick: function () { $("adminPass").value = ""; $("adminAuth").style.display = "none"; $("adminTools").style.display = "block"; openModal("adminModal"); } }));
+  }
+  function updateHeroChips() {
+    var hwCount = Object.keys(state.hw).length;
+    var examCount = state.exams.filter(function (e) { return daysLeft(e.date) >= 0; }).length;
+    var hwEl = $("heroHw"), exEl = $("heroExam");
+    if (hwEl) hwEl.textContent = "📝 " + hwCount + " واجب مسجل";
+    if (exEl) exEl.textContent = "⏰ " + examCount + " امتحان قادم";
+  }
+  function renderAll() { renderAdminBar(); renderChat(); renderInbox(); renderConfessions(); renderNews(); renderPoll(); renderExams(); renderSoon(); renderTabs(); lessonSig = ""; tick(); renderStats(); updateHeroChips(); renderHud(); renderShop(); renderQuiz(); }
+
+  /* ================= العمليات ================= */
+  function vote(i) {
+    var id = "voted_" + state.poll.id;
+    if (lsGet(id, null) !== null) { toast("صوّتت من قبل ✔"); return; }
+    lsSet(id, String(i));
+    state.votes[i]++;
+    renderPoll();
+    push(function () { return rtdb("PUT", "votes/v" + i, { ".sv": { increment: 1 } }); });
+    var n = lsGet("final_student_name", null);
+    if (n && REMOTE) rtroot("PUT", "pollVoters/" + state.poll.id + "/" + getSid(), { name: n, opt: i, ts: Date.now() }).catch(function () {});
+  }
+  function deleteNews(id) {
+    if (!confirm("حذف هذا التبليغ؟")) return;
+    state.news = state.news.filter(function (n) { return n.id !== id; });
+    renderNews(); push(function () { return rtdb("DELETE", "news/" + id); });
+  }
+  function deleteExam(id) {
+    if (!confirm("حذف هذا الامتحان؟")) return;
+    state.exams = state.exams.filter(function (e) { return e.id !== id; });
+    renderExams(); push(function () { return rtdb("DELETE", "exams/" + id); });
+  }
+  function openHw(key, name, day) {
+    activeHwKey = key;
+    $("hwTitle").textContent = "واجب " + name + " (" + day + ")";
+    $("hwText").value = state.hw[key] || "";
+    openModal("hwModal");
+  }
+
+  /* ================= الشات والمراسلة ================= */
+  var chatMsgs = [], convs = [], myThread = [], adminSel = null, lastSend = 0;
+  function rtroot(method, path, body, q) {
+    return getAuthParam().then(function (a) {
+      var qs = [q, a].filter(Boolean).join("&");
+      var url = CONFIG.FIREBASE_URL.replace(/\/$/, "") + "/" + path + ".json" + (qs ? "?" + qs : "");
+      var opt = { method: method };
+      if (body !== undefined) { opt.headers = { "Content-Type": "application/json" }; opt.body = JSON.stringify(body); }
+      return fetch(url, opt).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+    });
+  }
+  function getSid() {
+    var s = lsGet("sid", null);
+    if (!s) { s = "s" + Date.now().toString(36) + Math.random().toString(36).slice(2, 8); lsSet("sid", s); }
+    return s;
+  }
+  function myName() { return lsGet("final_student_name", "طالب"); }
+  function hhmm(ts) { var d = new Date(ts); return pad(d.getHours()) + ":" + pad(d.getMinutes()); }
+  function hasLink(t) { return /(https?:\/\/|www\.|t\.me|\b[a-z0-9-]+\.(com|net|org|io|me|ly|app|xyz|info)\b)/i.test(t); }
+  function newMsgId() { return "m" + Date.now() + Math.random().toString(36).slice(2, 5); }
+  function tooFast() {
+    if (isAdmin) return false;
+    if (Date.now() - lastSend < 4000) { toast("انتظر شوية قبل الرسالة الجاية ⏳"); return true; }
+    lastSend = Date.now(); return false;
+  }
+  function stickBottom(el, fn) {
+    var atBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 60;
+    fn();
+    if (atBottom) el.scrollTop = el.scrollHeight;
+  }
+
+  function pullChat() {
+    if (!REMOTE || document.hidden) return;
+    rtroot("GET", "chat", undefined, "orderBy=" + encodeURIComponent('"$key"') + "&limitToLast=60").then(function (d) {
+      chatMsgs = d ? Object.keys(d).sort().map(function (k) { return Object.assign({ id: k }, d[k]); }) : [];
+      renderChat(); chatUnreadCheck();
+    }).catch(function () {});
+  }
+  function renderChat() {
+    var box = $("chatMsgs");
+    $("chatInfo").textContent = REMOTE ? "مباشر 🟢" : "";
+    if (!REMOTE) { clear(box); box.appendChild(h("div", { "class": "empty", text: "الشات يحتاج ربط السيرفر" })); return; }
+    var sid = getSid();
+    stickBottom(box, function () {
+      clear(box);
+      if (!chatMsgs.length) { box.appendChild(h("div", { "class": "empty", text: "كوون أول واحد يكتب 👋" })); return; }
+      chatMsgs.forEach(function (m) {
+        box.appendChild(h("div", { "class": "msg" + (m.sid === sid ? " me" : "") },
+          isAdmin ? h("button", { "class": "del", text: "✕", onclick: function () { delChat(m.id); } }) : null,
+          h("div", { "class": "who", text: String(m.name || "طالب") }),
+          h("div", { "class": "mt", text: String(m.text || "") }),
+          h("div", { "class": "tm", text: m.ts ? hhmm(m.ts) : "" })));
+      });
+    });
+  }
+  function sendChat() {
+    var inp = $("chatInput"), text = inp.value.trim();
+    if (!text) return;
+    if (!REMOTE) { toast("الشات يحتاج ربط السيرفر"); return; }
+    if (hasLink(text)) { toast("🚫 ممنوع إرسال الروابط"); return; }
+    if (tooFast()) return;
+    var m = { id: newMsgId(), name: isAdmin ? "👑 الأدمن" : myName(), text: text, ts: Date.now(), sid: getSid() };
+    inp.value = "";
+    chatMsgs.push(m); renderChat();
+    $("chatMsgs").scrollTop = $("chatMsgs").scrollHeight;
+    rtroot("PUT", "chat/" + m.id, { name: m.name, text: m.text, ts: m.ts, sid: m.sid }).catch(function () { toast("⚠️ ما انرسلت الرسالة، تأكد من النت"); });
+  }
+  function delChat(id) {
+    chatMsgs = chatMsgs.filter(function (m) { return m.id !== id; }); renderChat();
+    rtroot("DELETE", "chat/" + id).catch(function () { toast("⚠️ ما انحذفت"); });
+  }
+
+  function msgList(d) {
+    return d ? Object.keys(d).sort().map(function (k) { return Object.assign({ id: k }, d[k]); }) : [];
+  }
+  function pullInbox() {
+    if (!REMOTE || document.hidden) return;
+    if (isAdmin) {
+      rtroot("GET", "inbox").then(function (d) {
+        convs = d ? Object.keys(d).map(function (sid) {
+          var c = d[sid] || {}, msgs = msgList(c.msgs);
+          return { sid: sid, name: (c.meta && c.meta.name) || "طالب", msgs: msgs, last: msgs.length ? msgs[msgs.length - 1] : null };
+        }).filter(function (c) { return c.last; }).sort(function (a, b) { return b.last.ts - a.last.ts; }) : [];
+        inboxNotifCheck(); renderInbox();
+      }).catch(function () {});
+    } else {
+      rtroot("GET", "inbox/" + getSid() + "/msgs").then(function (d) { myThread = msgList(d); inboxNotifCheck(); renderInbox(); }).catch(function () {});
+    }
+  }
+  function isUnread(c) { return c.last && c.last.from === "s" && c.last.ts > (+lsGet("seen_" + c.sid, 0)); }
+  function renderInbox() {
+    var list = $("inboxList"), box = $("inboxMsgs"), thread = [], who = "";
+    clear(list); clear(box);
+    if (!REMOTE) { box.appendChild(h("div", { "class": "empty", text: "المراسلة تحتاج ربط السيرفر" })); return; }
+    if (isAdmin) {
+      $("inboxTitle").textContent = "💌 صندوق الأدمن";
+      list.style.display = "flex";
+      var unread = convs.filter(isUnread).length;
+      $("inboxBadge").textContent = unread ? unread + " جديد 🔴" : "";
+      if (!convs.length) list.appendChild(h("span", { "class": "empty", text: "ما كو رسائل بعد" }));
+      convs.forEach(function (c) {
+        list.appendChild(h("button", { "class": "tab" + (adminSel === c.sid ? " active" : ""), text: (isUnread(c) ? "🔴 " : "") + c.name,
+          onclick: function () { adminSel = c.sid; lsSet("seen_" + c.sid, String(c.last.ts)); renderInbox(); } }));
+      });
+      var cur = convs.filter(function (c) { return c.sid === adminSel; })[0];
+      if (cur) { thread = cur.msgs; who = cur.name; lsSet("seen_" + cur.sid, String(cur.last.ts)); }
+      else box.appendChild(h("div", { "class": "empty", text: "اختر طالب من فوق لقراءة رسالته والرد عليه" }));
+    } else {
+      $("inboxTitle").textContent = "💌 اسأل الأدمن (خاص)";
+      $("inboxBadge").textContent = "";
+      list.style.display = "none";
+      thread = myThread; who = myName();
+      if (!thread.length) box.appendChild(h("div", { "class": "empty", text: "اكتب سؤالك والأدمن يرد عليك هنا" }));
+    }
+    stickBottom(box, function () {
+      thread.forEach(function (m) {
+        var mine = isAdmin ? m.from === "a" : m.from === "s";
+        box.appendChild(h("div", { "class": "msg" + (mine ? " me" : "") },
+          h("div", { "class": "who", text: m.from === "a" ? "👑 الأدمن" : who }),
+          h("div", { "class": "mt", text: String(m.text || "") }),
+          h("div", { "class": "tm", text: m.ts ? hhmm(m.ts) : "" })));
+      });
+    });
+  }
+  function sendInbox() {
+    var inp = $("inboxInput"), text = inp.value.trim();
+    if (!text) return;
+    if (!REMOTE) { toast("المراسلة تحتاج ربط السيرفر"); return; }
+    var sid, m;
+    if (isAdmin) {
+      if (!adminSel) { toast("اختر محادثة أولاً"); return; }
+      sid = adminSel; m = { from: "a", text: text, ts: Date.now() };
+    } else {
+      if (hasLink(text)) { toast("🚫 ممنوع إرسال الروابط"); return; }
+      if (tooFast()) return;
+      sid = getSid(); m = { from: "s", text: text, ts: Date.now() };
+    }
+    inp.value = "";
+    var id = newMsgId();
+    var job = rtroot("PUT", "inbox/" + sid + "/msgs/" + id, m);
+    if (!isAdmin) job = job.then(function () { return rtroot("PUT", "inbox/" + sid + "/meta", { name: myName(), ts: m.ts }); });
+    job.then(function () { toast("انرسلت ✔"); pullInbox(); }).catch(function () { toast("⚠️ ما انرسلت الرسالة، تأكد من النت"); });
+  }
+
+  /* ================= الإشعارات ================= */
+  var notifs = [], known = null, chatUnread = 0, inboxUnread = 0;
+  try { notifs = JSON.parse(lsGet("notifs_v1", "[]")) || []; } catch (e) { notifs = []; }
+  try { known = JSON.parse(lsGet("known_v1", "null")); } catch (e) { known = null; }
+  function saveNotifs() { lsSet("notifs_v1", JSON.stringify(notifs)); }
+  function saveKnown() { lsSet("known_v1", JSON.stringify(known)); }
+  function tabVisible(t) { return !document.hidden && (window.innerWidth > 700 || document.body.getAttribute("data-tab") === t); }
+  function setDot(el, n) { if (!el) return; el.textContent = n > 9 ? "9+" : String(n); el.classList.toggle("show", n > 0); }
+  function updateBadges() {
+    setDot($("bellDot"), notifs.filter(function (n) { return !n.read; }).length);
+    setDot($("nbChat"), chatUnread);
+    setDot($("nbInbox"), inboxUnread);
+  }
+  function showSys(title, body, tag) {
+    try {
+      if (!("Notification" in window) || Notification.permission !== "granted") return;
+      var opts = { body: body, icon: "icon-192.png", badge: "icon-192.png", tag: tag, dir: "rtl", lang: "ar" };
+      if (navigator.serviceWorker && navigator.serviceWorker.getRegistration) {
+        navigator.serviceWorker.getRegistration().then(function (reg) {
+          if (reg && reg.showNotification) reg.showNotification(title, opts);
+          else new Notification(title, opts);
+        }).catch(function () {});
+      } else { new Notification(title, opts); }
+    } catch (e) {}
+  }
+  function addNotif(id, icon, text) {
+    if (notifs.some(function (n) { return n.id === id; })) return false;
+    notifs.unshift({ id: id, icon: icon, text: text, ts: Date.now(), read: false });
+    if (notifs.length > 40) notifs.length = 40;
+    saveNotifs(); updateBadges();
+    if (document.hidden) showSys("دفتر الرابع ب", icon + " " + text, id);
+    else toast(icon + " " + text);
+    return true;
+  }
+  function hwLabel(key) {
+    var parts = key.split("_"), d = null;
+    DAYS.forEach(function (x) { if (x.id === parts[0]) d = x; });
+    var subj = (TIMETABLE[parts[0]] || [])[+parts[1]] || "";
+    return subj + (d ? " (" + d.name + ")" : "");
+  }
+  function diffAndNotify(ns) {
+    var cur = { news: ns.news.map(function (n) { return n.id; }), hw: Object.assign({}, ns.hw), exams: ns.exams.map(function (e) { return e.id; }) };
+    if (!known || !known.news) { known = cur; saveKnown(); return; }
+    if (!isAdmin) {
+      ns.news.forEach(function (n) {
+        if (known.news.indexOf(n.id) < 0) addNotif("news:" + n.id, n.type === "holiday" ? "🚨" : n.type === "exam" ? "📝" : "📢", n.text.slice(0, 120));
+      });
+      Object.keys(ns.hw).forEach(function (k) {
+        if (known.hw[k] !== ns.hw[k]) addNotif("hw:" + k + ":" + ns.hw[k].length + ":" + ns.hw[k].slice(0, 24), "📝", "واجب جديد — " + hwLabel(k) + ": " + ns.hw[k].slice(0, 80));
+      });
+      ns.exams.forEach(function (e) {
+        if (known.exams.indexOf(e.id) < 0) addNotif("exam:" + e.id, "⏰", "امتحان " + e.subject + " بتاريخ " + e.date);
+      });
+    }
+    known = cur; saveKnown();
+  }
+  function lastAdminTs() { var t = 0; myThread.forEach(function (m) { if (m.from === "a" && (m.ts || 0) > t) t = m.ts; }); return t; }
+  function inboxNotifCheck() {
+    if (!REMOTE) return;
+    if (isAdmin) {
+      var un = convs.filter(isUnread);
+      un.forEach(function (c) { addNotif("inb:" + c.sid + ":" + c.last.ts, "💌", "رسالة جديدة من " + c.name); });
+      inboxUnread = tabVisible("inbox") ? 0 : un.length;
+    } else {
+      var lastA = lastAdminTs(), raw = lsGet("seen_inbox_a", null);
+      if (raw === null) { lsSet("seen_inbox_a", String(lastA)); inboxUnread = 0; }
+      else if (lastA > +raw) {
+        addNotif("inb:a:" + lastA, "💌", "رد جديد من الأدمن على سؤالك");
+        if (tabVisible("inbox")) { lsSet("seen_inbox_a", String(lastA)); inboxUnread = 0; } else inboxUnread = 1;
+      } else inboxUnread = 0;
+    }
+    updateBadges();
+  }
+  function chatUnreadCheck() {
+    var sid = getSid(), raw = lsGet("seen_chat", null);
+    var latest = chatMsgs.length ? (chatMsgs[chatMsgs.length - 1].ts || 0) : 0;
+    if (raw === null) { lsSet("seen_chat", String(latest)); chatUnread = 0; }
+    else {
+      var seen = +raw, n = 0;
+      chatMsgs.forEach(function (m) { if ((m.ts || 0) > seen && m.sid !== sid) n++; });
+      if (tabVisible("chat")) { if (latest > seen) lsSet("seen_chat", String(latest)); chatUnread = 0; } else chatUnread = n;
+    }
+    updateBadges();
+  }
+  function markSeen(t) {
+    if (t === "chat" && chatMsgs.length) lsSet("seen_chat", String(chatMsgs[chatMsgs.length - 1].ts || 0));
+    if (t === "inbox") {
+      if (!isAdmin) { var a = lastAdminTs(); if (a) lsSet("seen_inbox_a", String(a)); }
+      inboxUnread = 0;
+    }
+    if (t === "chat") chatUnread = 0;
+    updateBadges();
+  }
+  function fmtWhen(ts) { var d = new Date(ts); return d.getDate() + "/" + (d.getMonth() + 1) + " - " + pad(d.getHours()) + ":" + pad(d.getMinutes()); }
+  function permLabel() {
+    var b = $("notifPerm");
+    if (!("Notification" in window)) { b.style.display = "none"; return; }
+    b.style.display = "";
+    if (Notification.permission === "granted") { b.textContent = "✅ إشعارات الجهاز مفعّلة"; b.disabled = true; }
+    else if (Notification.permission === "denied") { b.textContent = "🚫 محظورة من إعدادات المتصفح"; b.disabled = true; }
+    else { b.textContent = "🔔 فعّل إشعارات الجهاز"; b.disabled = false; }
+  }
+  function openNotifs() {
+    var box = $("notifList"); clear(box);
+    if (!notifs.length) box.appendChild(h("div", { "class": "empty", text: "ما كو إشعارات بعد 👌" }));
+    notifs.forEach(function (n) {
+      box.appendChild(h("div", { "class": "news-item" + (n.read ? "" : " unread") },
+        h("div", { "class": "news-tag", text: fmtWhen(n.ts) }),
+        h("div", { "class": "news-text", text: n.icon + " " + n.text })));
+    });
+    permLabel(); openModal("notifModal");
+    notifs.forEach(function (n) { n.read = true; }); saveNotifs(); updateBadges();
+  }
+
+  /* ================= تنقّل الموبايل ================= */
+  function initNav() {
+    var nav = $("bottomNav");
+    function go(t) {
+      document.body.setAttribute("data-tab", t);
+      Array.prototype.forEach.call(nav.querySelectorAll("button"), function (b) { b.classList.toggle("on", b.getAttribute("data-go") === t); });
+      window.scrollTo(0, 0); markSeen(t);
+      if (t === "chat") { var m = $("chatMsgs"); m.scrollTop = m.scrollHeight; }
+      if (t === "inbox") { var m2 = $("inboxMsgs"); m2.scrollTop = m2.scrollHeight; }
+    }
+    nav.addEventListener("click", function (e) { var b = e.target.closest ? e.target.closest("button") : null; if (b) go(b.getAttribute("data-go")); });
+    go("home");
+  }
+
+  /* ================= تثبيت التطبيق ================= */
+  var installEvt = null;
+  function isStandalone() {
+    try { return (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || window.navigator.standalone === true; } catch (e) { return false; }
+  }
+  function initInstall() {
+    var btn = $("installBtn");
+    if (isStandalone()) return;
+    btn.style.display = "";
+    window.addEventListener("beforeinstallprompt", function (e) { e.preventDefault(); installEvt = e; });
+    window.addEventListener("appinstalled", function () { installEvt = null; btn.style.display = "none"; toast("انثبّت التطبيق ✔"); });
+    btn.addEventListener("click", function () {
+      if (installEvt) {
+        installEvt.prompt();
+        installEvt.userChoice.then(function () { installEvt = null; });
+        return;
+      }
+      var ua = navigator.userAgent || "";
+      var msg;
+      if (/iphone|ipad|ipod/i.test(ua)) msg = "على الآيفون: اضغط زر المشاركة (المربع اللي طالع منه سهم) بأسفل Safari، ثم اختر «إضافة إلى الشاشة الرئيسية».";
+      else if (/android/i.test(ua)) msg = "على الأندرويد: اضغط على القائمة (⋮) بأعلى Chrome، ثم اختر «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية».";
+      else msg = "من Chrome: اضغط على أيقونة التثبيت بشريط العنوان، أو من القائمة (⋮) اختر «حفظ ومشاركة» ثم «تثبيت».";
+      $("installHelp").textContent = msg;
+      openModal("installModal");
+    });
+  }
+
+  /* ================= تسجيل الطلاب وتتبع الزيارات ================= */
+  var studentsCache = [], votersCache = null, studentsMode = "all";
+  function registerStudent() {
+    if (!REMOTE) return;
+    var n = lsGet("final_student_name", null);
+    if (!n || lsGet("reg_done", "") === "1") return;
+    rtroot("PUT", "students/" + getSid(), { name: n, ts: Date.now(), lastSeen: Date.now() })
+      .then(function () { lsSet("reg_done", "1"); }).catch(function () {});
+  }
+  function markLastSeenVisit() {
+    if (!REMOTE) return;
+    var n = lsGet("final_student_name", null);
+    if (!n) return;
+    if (lsGet("reg_done", "") !== "1") return; // أول زيارة تسجّل عن طريق registerStudent نفسها
+    rtroot("PATCH", "students/" + getSid(), { lastSeen: Date.now() }).catch(function () {});
+  }
+  function isToday(ts) {
+    if (!ts) return false;
+    var a = new Date(ts), b = new Date();
+    return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+  }
+  function openStudents() {
+    var box = $("studentsList"); clear(box);
+    box.appendChild(h("div", { "class": "empty", text: "جاري التحميل..." }));
+    $("studentsCount").textContent = "";
+    studentsMode = "all"; votersCache = null;
+    document.querySelectorAll("#studentsTabs .tab").forEach(function (b) { b.classList.toggle("active", b.getAttribute("data-mode") === "all"); });
+    openModal("studentsModal");
+    rtroot("GET", "students").then(function (d) {
+      studentsCache = d ? Object.keys(d).map(function (k) { return Object.assign({ id: k }, d[k]); }).sort(function (a, b) { return (a.ts || 0) - (b.ts || 0); }) : [];
+      renderStudents();
+    }).catch(function () { clear(box); box.appendChild(h("div", { "class": "empty", text: "⚠️ ما كدرت أحمّل القائمة، تأكد من النت" })); });
+  }
+  function loadVoters(cb) {
+    if (votersCache) { cb(votersCache); return; }
+    rtroot("GET", "pollVoters/" + state.poll.id).then(function (d) {
+      votersCache = d ? Object.keys(d).map(function (k) { return Object.assign({ id: k }, d[k]); }) : [];
+      cb(votersCache);
+    }).catch(function () { votersCache = []; cb([]); toast("⚠️ ما كدرت أحمّل المصوتين"); });
+  }
+  function renderStudents() {
+    var box = $("studentsList"); clear(box);
+    if (studentsMode === "voters") {
+      box.appendChild(h("div", { "class": "empty", text: "جاري التحميل..." }));
+      loadVoters(function (list) {
+        clear(box);
+        $("studentsCount").textContent = list.length + " صوّت";
+        if (!list.length) { box.appendChild(h("div", { "class": "empty", text: "ما صوّت أي طالب بهذا الاستفتاء بعد" })); return; }
+        var opts = [state.poll.opt0, state.poll.opt1];
+        list.sort(function (a, b) { return (a.ts || 0) - (b.ts || 0); }).forEach(function (s, i) {
+          box.appendChild(h("div", { "class": "exam-row" },
+            h("div", {}, h("div", { style: "font-weight:800", text: (i + 1) + ". " + (s.name || "؟") }),
+              h("div", { "class": "l-time", text: s.ts ? hhmm(s.ts) : "" })),
+            h("span", { "class": "pill", text: opts[s.opt] || "" })));
+        });
+      });
+      return;
+    }
+    var list = studentsCache.slice();
+    if (studentsMode === "today") list = list.filter(function (s) { return isToday(s.lastSeen || s.ts); });
+    $("studentsCount").textContent = list.length + (studentsMode === "today" ? " زار اليوم" : " طالب");
+    if (!list.length) { box.appendChild(h("div", { "class": "empty", text: studentsMode === "today" ? "ما زار الموقع أي طالب اليوم لين الحين" : "ما سجّل أي طالب بعد" })); return; }
+    var seen = {};
+    studentsCache.forEach(function (s) { var k = String(s.name || "").replace(/\s+/g, " ").trim(); seen[k] = (seen[k] || 0) + 1; });
+    list.forEach(function (s, i) {
+      var k = String(s.name || "").replace(/\s+/g, " ").trim();
+      var d = s.lastSeen || s.ts ? new Date(s.lastSeen || s.ts) : null;
+      box.appendChild(h("div", { "class": "exam-row" },
+        h("div", {},
+          h("div", { style: "font-weight:800", text: (i + 1) + ". " + k + (seen[k] > 1 ? "  ⚠️ مكرر" : "") }),
+          h("div", { "class": "l-time", text: d ? d.getDate() + "/" + (d.getMonth() + 1) + " - " + hhmm(d.getTime()) : "" })),
+        h("button", { "class": "btn ghost", style: "padding:2px 8px", text: "✕", onclick: function () {
+          if (!confirm("حذف " + k + " من القائمة؟")) return;
+          studentsCache = studentsCache.filter(function (x) { return x.id !== s.id; }); renderStudents();
+          rtroot("DELETE", "students/" + s.id).catch(function () { toast("⚠️ ما انحذف"); });
+        } })));
+    });
+  }
+
+  /* ================= ربط الأزرار ================= */
+  function bind() {
+    document.querySelectorAll("[data-close]").forEach(function (b) { b.addEventListener("click", function () { closeModal(b.getAttribute("data-close")); }); });
+    document.querySelectorAll(".overlay").forEach(function (o) { o.addEventListener("mousedown", function (e) { if (e.target === o && o.id !== "nameModal") o.classList.remove("show"); }); });
+    $("search").addEventListener("input", function () { renderGrid(); });
+    $("bellBtn").addEventListener("click", openNotifs);
+    $("notifClear").addEventListener("click", function () { notifs = []; saveNotifs(); updateBadges(); openNotifs(); });
+    $("notifPerm").addEventListener("click", function () {
+      try { Notification.requestPermission().then(function () { permLabel(); }); } catch (e) { permLabel(); }
+    });
+    $("chatSend").addEventListener("click", sendChat);
+    $("chatInput").addEventListener("keydown", function (e) { if (e.key === "Enter") sendChat(); });
+    $("inboxSend").addEventListener("click", sendInbox);
+    $("confSend").addEventListener("click", sendConfession);
+    $("confInput").addEventListener("keydown", function (e) { if (e.key === "Enter") sendConfession(); });
+    $("checkinBtn").addEventListener("click", doCheckin);
+    $("aQuiz").addEventListener("click", function () { closeModal("adminModal"); $("qQuestion").value = ""; $("qAnswer").value = ""; openModal("quizModal"); });
+    $("qSave").addEventListener("click", function () {
+      var q = $("qQuestion").value.trim(), a = $("qAnswer").value.trim();
+      if (!q || !a) { toast("اكتب السؤال والإجابة!"); return; }
+      rtroot("PUT", "dailyQuiz", { id: Date.now(), q: q, a: a }).then(function () { closeModal("quizModal"); pullQuiz(); toast("تم نشر سؤال اليوم 🧠"); }).catch(function () { toast("⚠️ ما انحفظ"); });
+    });
+    $("aStudents").addEventListener("click", function () {
+      if (!REMOTE) { toast("القائمة تحتاج ربط السيرفر"); return; }
+      closeModal("adminModal"); openStudents();
+    });
+    document.querySelectorAll("#studentsTabs .tab").forEach(function (b) {
+      b.addEventListener("click", function () {
+        studentsMode = b.getAttribute("data-mode");
+        document.querySelectorAll("#studentsTabs .tab").forEach(function (x) { x.classList.toggle("active", x === b); });
+        renderStudents();
+      });
+    });
+    $("studentsCopy").addEventListener("click", function () {
+      var src = studentsMode === "voters" ? (votersCache || []) : studentsMode === "today" ? studentsCache.filter(function (s) { return isToday(s.lastSeen || s.ts); }) : studentsCache;
+      var txt = src.map(function (s, i) { return (i + 1) + ". " + String(s.name || "").trim(); }).join("\n");
+      if (navigator.clipboard) navigator.clipboard.writeText(txt).then(function () { toast("اننسخت الأسماء 📋"); }, function () { toast("ما كدرت أنسخ"); });
+    });
+    $("inboxInput").addEventListener("keydown", function (e) { if (e.key === "Enter") sendInbox(); });
+
+    // الثيم
+    function applyTheme(t) { document.documentElement.setAttribute("data-theme", t); $("themeBtn").textContent = t === "dark" ? "☀️" : "🌙"; var m = document.querySelector('meta[name="theme-color"]'); if (m) m.setAttribute("content", t === "dark" ? "#111513" : "#2c7a59"); }
+    applyTheme(lsGet("theme", "dark"));
+    $("themeBtn").addEventListener("click", function () { var t = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark"; lsSet("theme", t); applyTheme(t); });
+
+    // اسم الطالب
+    $("nameBtn").addEventListener("click", function () {
+      var v = $("nameInput").value.trim();
+      if (!v) { toast("اكتب اسمك الثلاثي من فضلك!"); return; }
+      if (v.split(/\s+/).length < 3) { toast("اكتب الاسم ثلاثي كامل (ثلاث كلمات)"); return; }
+      lsSet("final_student_name", v); lsSet("reg_done", "0"); registerStudent(); saveProfile();
+      closeModal("nameModal");
+      toast("أهلاً " + v.split(/\s+/)[0] + " 👋 تم تسجيلك");
+    });
+
+    // الأدمن
+    $("adminEmail").style.display = CONFIG.API_KEY ? "" : "none";
+    function adminUI() { $("adminAuth").style.display = isAdmin ? "none" : "block"; $("adminTools").style.display = isAdmin ? "block" : "none"; }
+    $("adminLink").addEventListener("click", function () { $("adminPass").value = ""; adminUI(); openModal("adminModal"); });
+    $("adminLogin").addEventListener("click", function () {
+      if (CONFIG.API_KEY) {
+        var em = $("adminEmail").value.trim(), pw = $("adminPass").value;
+        if (!em || !pw) { toast("اكتب الإيميل وكلمة المرور"); return; }
+        signIn(em, pw).then(function () {
+          isAdmin = true; adminUI(); closeModal("adminModal"); $("adminPass").value = ""; renderAll(); pullInbox();
+          toast("أهلاً أدمن 👑 اضغط على أي حصة لتسجيل الواجب ✏️");
+        }).catch(function () { toast("الإيميل أو كلمة المرور خاطئة!"); });
+        return;
+      }
+      if (!window.crypto || !crypto.subtle) { toast("افتح الموقع عبر رابط https للدخول كأدمن"); return; }
+      crypto.subtle.digest("SHA-256", new TextEncoder().encode(CONFIG.SALT + $("adminPass").value.trim())).then(function (buf) {
+        var hx = Array.prototype.map.call(new Uint8Array(buf), function (b) { return ("0" + b.toString(16)).slice(-2); }).join("");
+        if (hx !== CONFIG.ADMIN_HASH) { toast("كلمة المرور خاطئة!"); return; }
+        isAdmin = true; try { sessionStorage.setItem("adm", "1"); } catch (e) {}
+        adminUI(); closeModal("adminModal"); renderAll(); pullInbox(); toast("أهلاً أدمن 👑 اضغط على أي حصة لتسجيل الواجب ✏️");
+      });
+    });
+    $("aLogout").addEventListener("click", function () { isAdmin = false; auth = null; saveAuth(); try { sessionStorage.removeItem("adm"); } catch (e) {} closeModal("adminModal"); adminSel = null; renderAll(); pullInbox(); });
+    $("aNews").addEventListener("click", function () { closeModal("adminModal"); $("newsText").value = ""; openModal("newsModal"); });
+    $("aPoll").addEventListener("click", function () {
+      closeModal("adminModal");
+      $("pollQ").value = state.poll.question; $("pollA").value = state.poll.opt0; $("pollB").value = state.poll.opt1;
+      openModal("pollModal");
+    });
+    $("aExam").addEventListener("click", function () { closeModal("adminModal"); openModal("examModal"); });
+    $("aExport").addEventListener("click", function () {
+      var a = h("a", { href: "data:application/json;charset=utf-8," + encodeURIComponent(JSON.stringify(state, null, 2)), download: "data.json" });
+      document.body.appendChild(a); a.click(); a.remove();
+      toast(REMOTE ? "نسخة احتياطية جاهزة 📥" : "نزل data.json — ارفعه على Neocities 🚀");
+    });
+
+    $("newsSave").addEventListener("click", function () {
+      var text = $("newsText").value.trim();
+      if (!text) { toast("اكتب نص التبليغ!"); return; }
+      var n = { id: "n" + Date.now(), type: $("newsType").value, text: text, ts: Date.now() };
+      state.news.unshift(n); renderNews(); closeModal("newsModal");
+      push(function () { return rtdb("PUT", "news/" + n.id, { type: n.type, text: n.text, ts: n.ts }); });
+    });
+    $("pollSave").addEventListener("click", function () {
+      var q = $("pollQ").value.trim();
+      if (!q) { toast("اكتب السؤال!"); return; }
+      state.poll = { id: Date.now(), question: q, opt0: $("pollA").value.trim() || "نعم", opt1: $("pollB").value.trim() || "لا" };
+      state.votes = [0, 0]; renderPoll(); closeModal("pollModal");
+      var p = state.poll;
+      push(function () { return rtdb("PUT", "poll", p).then(function () { return rtdb("PUT", "votes", { v0: 0, v1: 0 }); }); });
+    });
+    $("examSave").addEventListener("click", function () {
+      var date = $("examDate").value, subject = $("examSubject").value;
+      if (!date) { toast("اختر التاريخ!"); return; }
+      var e = { id: "e" + Date.now(), subject: subject, date: date };
+      state.exams.push(e); state.exams.sort(function (a, b) { return a.date < b.date ? -1 : 1; });
+      renderExams(); closeModal("examModal");
+      push(function () { return rtdb("PUT", "exams/" + e.id, { subject: e.subject, date: e.date }); });
+    });
+    $("hwSave").addEventListener("click", function () {
+      if (!activeHwKey) return;
+      var key = activeHwKey, val = $("hwText").value.trim();
+      if (val) state.hw[key] = val; else delete state.hw[key];
+      closeModal("hwModal"); renderGrid(); renderSoon(); renderStats();
+      push(function () { return val ? rtdb("PUT", "hw/" + key, val) : rtdb("DELETE", "hw/" + key); });
+    });
+
+    var sel = $("examSubject");
+    Object.keys(SUBJECTS).forEach(function (n) { sel.appendChild(h("option", { value: n, text: SUBJECTS[n].icon + " " + n })); });
+  }
+
+  /* ================= التشغيل ================= */
+  bind();
+  initGames();
+  try { var _t = dayOf(new Date()); if (window.matchMedia("(max-width:700px)").matches && _t && !_t.holiday) filterDay = _t.id; } catch (e) {}
+  initNav();
+  initInstall();
+  updateBadges();
+  var hadLocal = loadLocal();
+  setStatus(REMOTE ? "off" : "file");
+  renderAll();
+  setInterval(tick, 1000);
+  if (!lsGet("final_student_name", null)) openModal("nameModal");
+
+  if (REMOTE) {
+    pull().then(function () { if (!hadLocal) loadStaticFile(); });
+    setInterval(pull, CONFIG.POLL_MS);
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) { pull(); pullChat(); pullInbox(); pullConfessions(); pullQuiz(); pullLeaderboard(); } });
+    pullChat(); pullInbox(); pullConfessions(); pullQuiz(); pullLeaderboard();
+    registerStudent(); markLastSeenVisit(); saveProfile();
+    setInterval(pullChat, 6000);
+    setInterval(pullInbox, 10000);
+    setInterval(pullConfessions, 9000);
+    setInterval(pullQuiz, 15000);
+    setInterval(pullLeaderboard, 20000);
+  } else {
+    loadStaticFile();
+  }
+  setInterval(function () { renderExams(); renderSoon(); }, 60000);
+
+  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
+    navigator.serviceWorker.register("sw.js").catch(function () {});
+  }
+})();
+
+/* إخفاء شارة Netlify المجانية (تنحقن بالصفحة من نتلفاي نفسها بعد التحميل) */
+(function () {
+  function hide(el) {
+    var box = el;
+    for (var i = 0; i < 4 && box.parentElement && box.parentElement !== document.body; i++) box = box.parentElement;
+    box.style.setProperty("display", "none", "important");
+    box.style.setProperty("visibility", "hidden", "important");
+  }
+  function zap() {
+    document.querySelectorAll('a[href*="netlify"], iframe[src*="netlify"], [id*="netlify" i], [class*="netlify" i]').forEach(hide);
+    document.querySelectorAll("div,a,span,button").forEach(function (el) {
+      var t = (el.textContent || "").trim();
+      if (t === "Powered by Netlify" || t === "Netlify") hide(el);
+    });
+  }
+  zap();
+  new MutationObserver(zap).observe(document.documentElement, { childList: true, subtree: true });
+  setInterval(zap, 1500);
+})();
+</script>
+</body>
+</html>
